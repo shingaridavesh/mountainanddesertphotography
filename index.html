@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mountain and Desert Photography</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Helvetica+Neue:wght@200;400&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #080808;
+      --surface: #111111;
+      --stone: #1e1e1e;
+      --dust: #9a8f82;
+      --sand: #c4a97d;
+      --horizon: #e8ddd0;
+      --white: #f5f2ee;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--horizon);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 200;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background: linear-gradient(to bottom, rgba(8,8,8,0.95), transparent);
+    }
+
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--sand); }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 4rem 3rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.4) 40%, rgba(8,8,8,0.15) 100%),
+        linear-gradient(160deg, #1a1410 0%, #0d1a1f 35%, #08080a 60%, #1a130a 100%);
+      z-index: 0;
+    }
+
+    /* Simulated landscape silhouette */
+    .hero-silhouette {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 55%;
+      z-index: 1;
+      background: 
+        radial-gradient(ellipse 60% 80% at 20% 100%, #0a0806 0%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 80% 100%, #060c10 0%, transparent 70%);
+    }
+
+    /* SVG mountain range */
+    .hero-mountains {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: 0.95;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--sand);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+      color: var(--dust);
+      margin-top: 1rem;
+      margin-bottom: 2.5rem;
+      max-width: 480px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--sand);
+      padding: 0.85rem 2rem;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .hero-cta:hover {
+      background: var(--white);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 3rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-scroll span {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dust);
+      writing-mode: vertical-rl;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--sand), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* SECTION BASE */
+    section { padding: 7rem 3rem; }
+
+    .section-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      max-width: 60px;
+      height: 1px;
+      background: var(--sand);
+      opacity: 0.4;
+    }
+
+    /* GALLERY */
+    #gallery { background: var(--surface); }
+
+    .gallery-intro {
+      max-width: 560px;
+      margin-bottom: 4rem;
+    }
+
+    .gallery-intro h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .gallery-intro p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--dust);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: 200px;
+      gap: 3px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+    .gallery-item:nth-child(2) { grid-column: span 5; grid-row: span 1; }
+    .gallery-item:nth-child(3) { grid-column: span 5; grid-row: span 1; }
+    .gallery-item:nth-child(4) { grid-column: span 4; grid-row: span 2; }
+    .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
+    .gallery-item:nth-child(6) { grid-column: span 4; grid-row: span 2; }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover .gallery-placeholder { transform: scale(1.04); }
+
+    /* Photo placeholder gradients — each unique */
+    .p1 { background: linear-gradient(160deg, #0d1520 0%, #1a2a1a 40%, #2a1f10 100%); }
+    .p2 { background: linear-gradient(200deg, #1f1208 0%, #2d1f00 50%, #0a0d12 100%); }
+    .p3 { background: linear-gradient(140deg, #080e18 0%, #151f28 60%, #1a150a 100%); }
+    .p4 { background: linear-gradient(180deg, #1a0e06 0%, #2a1800 60%, #0d1208 100%); }
+    .p5 { background: linear-gradient(170deg, #0a1520 0%, #1a2820 50%, #1f1508 100%); }
+    .p6 { background: linear-gradient(150deg, #1a1008 0%, #281800 50%, #0e1818 100%); }
+
+    .gallery-item-label {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1rem 0.8rem;
+      background: linear-gradient(to top, rgba(8,8,8,0.85), transparent);
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-item-label { opacity: 1; }
+
+    .gallery-note {
+      margin-top: 2rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--dust);
+      opacity: 0.6;
+    }
+
+    /* ABOUT */
+    #about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+      height: 500px;
+    }
+
+    .about-img-main {
+      width: 75%;
+      height: 85%;
+      background: linear-gradient(155deg, #1a120a 0%, #0a1520 50%, #1a1508 100%);
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+
+    .about-img-accent {
+      width: 50%;
+      height: 40%;
+      background: linear-gradient(135deg, #2a1800 0%, #0d1a1a 100%);
+      position: absolute;
+      top: 0; right: 0;
+      border: 3px solid var(--black);
+    }
+
+    .about-accent-line {
+      position: absolute;
+      bottom: 2rem; right: 20%;
+      width: 1px;
+      height: 80px;
+      background: var(--sand);
+      opacity: 0.5;
+    }
+
+    .about-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text h2 em {
+      font-style: italic;
+      color: var(--sand);
+    }
+
+    .about-text p {
+      font-size: 0.88rem;
+      line-height: 1.9;
+      color: var(--dust);
+      margin-bottom: 1.2rem;
+    }
+
+    .about-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(154, 143, 130, 0.2);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.4rem;
+      color: var(--sand);
+      display: block;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      opacity: 0.7;
+    }
+
+    /* FEATURED QUOTE */
+    .quote-section {
+      background: var(--stone);
+      padding: 7rem 3rem;
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: var(--sand);
+      opacity: 0.3;
+      line-height: 0.5;
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--white);
+      line-height: 1.5;
+      max-width: 780px;
+      margin: 0 auto 2rem;
+    }
+
+    .quote-attr {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+
+    /* PRINTS */
+    #prints { background: var(--black); }
+
+    .prints-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 3rem;
+    }
+
+    .print-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .print-img {
+      height: 320px;
+      transition: transform 0.5s ease;
+    }
+
+    .print-item:hover .print-img { transform: scale(1.03); }
+
+    .pr1 { background: linear-gradient(170deg, #0f1a10 0%, #1a1208 60%, #0a0f1a 100%); }
+    .pr2 { background: linear-gradient(160deg, #1a0e08 0%, #261800 50%, #0a1215 100%); }
+    .pr3 { background: linear-gradient(150deg, #080e18 0%, #151a10 50%, #1a1005 100%); }
+
+    .print-info {
+      padding: 1.2rem 0;
+    }
+
+    .print-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: var(--white);
+      margin-bottom: 0.25rem;
+    }
+
+    .print-meta {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+
+    .print-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--sand);
+      margin-top: 0.4rem;
+    }
+
+    /* CONTACT */
+    #contact { background: var(--surface); }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-text p {
+      font-size: 0.88rem;
+      line-height: 1.9;
+      color: var(--dust);
+      margin-bottom: 2rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-detail a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      transition: color 0.2s;
+    }
+
+    .contact-detail a:hover { color: var(--white); }
+
+    .contact-detail a::before {
+      content: '→';
+      font-style: normal;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dust);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      background: var(--stone);
+      border: 1px solid rgba(154, 143, 130, 0.15);
+      color: var(--white);
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: 200;
+      font-size: 0.88rem;
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--sand);
+    }
+
+    .form-group textarea { height: 120px; }
+
+    .btn-submit {
+      align-self: flex-start;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--sand);
+      border: none;
+      padding: 0.9rem 2.2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover { background: var(--white); }
+
+    /* FOOTER */
+    footer {
+      padding: 2.5rem 3rem;
+      background: var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(154, 143, 130, 0.1);
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      color: var(--dust);
+    }
+
+    .footer-copy {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--dust);
+      opacity: 0.5;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-social a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s, color 0.2s;
+    }
+
+    .footer-social a:hover { opacity: 1; color: var(--sand); }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,8,8,0.97);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem; right: 2.5rem;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--dust);
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: color 0.2s;
+    }
+
+    .lightbox-close:hover { color: var(--white); }
+
+    .lightbox-content {
+      width: min(80vw, 900px);
+      height: min(75vh, 650px);
+      background: linear-gradient(160deg, #0d1520 0%, #1a1208 50%, #0a0e18 100%);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 5rem 1.5rem; }
+
+      .hero { padding: 3rem 1.5rem; }
+      .hero-scroll { display: none; }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 180px;
+      }
+      .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+
+      #about { grid-template-columns: 1fr; gap: 3rem; }
+      .about-visual { height: 300px; }
+      .about-stats { gap: 2rem; }
+
+      .prints-grid { grid-template-columns: 1fr; }
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-brand">Mountain &amp; Desert Photography</a>
+    <ul class="nav-links">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#prints">Prints</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-silhouette"></div>
+
+    <!-- SVG mountain silhouette -->
+    <svg class="hero-mountains" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="300">
+      <path d="M0,300 L0,220 L80,160 L160,200 L260,80 L360,140 L440,100 L520,160 L600,60 L700,120 L800,40 L900,110 L980,70 L1060,130 L1140,90 L1220,150 L1300,110 L1380,170 L1440,140 L1440,300 Z" fill="#0a0a0a"/>
+      <path d="M0,300 L0,260 L100,230 L200,250 L300,210 L400,240 L500,200 L600,230 L700,180 L800,220 L900,170 L1000,210 L1100,185 L1200,220 L1300,200 L1400,230 L1440,210 L1440,300 Z" fill="#080808"/>
+    </svg>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Landscape & Nature Photography</p>
+      <h1 class="hero-title">Where<br/><em>silence</em><br/>has a shape.</h1>
+      <p class="hero-subtitle">Photographs from the high ridges and open desert floors of the American West.</p>
+      <a href="#gallery" class="hero-cta">View the Work</a>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <p class="section-label">Selected Work</p>
+    <div class="gallery-intro">
+      <h2>Light found at the edge of the world</h2>
+      <p>Each frame is the result of long approaches, pre-dawn starts, and patience earned across thousands of miles of wilderness travel.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p1"></div>
+        <div class="gallery-item-label">Cascade Range — Dawn</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p2"></div>
+        <div class="gallery-item-label">Mojave — Dusk</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p3"></div>
+        <div class="gallery-item-label">High Sierra — Storm</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p4"></div>
+        <div class="gallery-item-label">Colorado Plateau</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p5"></div>
+        <div class="gallery-item-label">White Sands — Twilight</div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox()">
+        <div class="gallery-placeholder p6"></div>
+        <div class="gallery-item-label">Death Valley — Midnight</div>
+      </div>
+    </div>
+    <p class="gallery-note">↑ Replace placeholder blocks with your own images — see deployment notes below.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-visual">
+      <div class="about-img-main"></div>
+      <div class="about-img-accent"></div>
+      <div class="about-accent-line"></div>
+    </div>
+    <div class="about-text">
+      <p class="section-label">About</p>
+      <h2>The land demands <em>stillness</em> before it gives anything.</h2>
+      <p>I work in the intervals between — the hour before light, the last minutes before a storm closes in, the cold that arrives after sunset in high places. These are not accidents. They are appointments.</p>
+      <p>My practice is built around extended time in terrain that most people move through quickly. The desert teaches patience. The mountain teaches humility. Both teach you to wait.</p>
+      <div class="about-stats">
+        <div>
+          <span class="stat-number">12</span>
+          <span class="stat-label">Years in the field</span>
+        </div>
+        <div>
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Wilderness locations</span>
+        </div>
+        <div>
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Prints sold</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <span class="quote-mark">"</span>
+    <blockquote>The camera is an instrument that teaches people how to see without a camera.</blockquote>
+    <p class="quote-attr">— Dorothea Lange</p>
+  </div>
+
+  <!-- PRINTS -->
+  <section id="prints">
+    <p class="section-label">Available Prints</p>
+    <div class="prints-grid">
+      <div class="print-item">
+        <div class="print-img pr1"></div>
+        <div class="print-info">
+          <p class="print-title">Ridgeline, Pre-Dawn</p>
+          <p class="print-meta">Archival Pigment Print · Limited to 25</p>
+          <p class="print-price">From $280</p>
+        </div>
+      </div>
+      <div class="print-item">
+        <div class="print-img pr2"></div>
+        <div class="print-info">
+          <p class="print-title">Desert Floor, Dusk</p>
+          <p class="print-meta">Archival Pigment Print · Limited to 25</p>
+          <p class="print-price">From $280</p>
+        </div>
+      </div>
+      <div class="print-item">
+        <div class="print-img pr3"></div>
+        <div class="print-info">
+          <p class="print-title">The Pass, Winter</p>
+          <p class="print-meta">Archival Pigment Print · Limited to 25</p>
+          <p class="print-price">From $280</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="section-label">Contact</p>
+        <h2>Commissions, prints &amp; licensing</h2>
+        <p>Available for editorial assignments, commercial licensing, and fine art print inquiries. Workshop requests welcome.</p>
+        <div class="contact-detail">
+          <a href="mailto:hello@mountaindesertphoto.com">hello@mountaindesertphoto.com</a>
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+          <a href="#">Print shop enquiry</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Print inquiry / Commission / Licensing" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about your project or inquiry..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="handleSubmit()">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-brand">Mountain &amp; Desert Photography</span>
+    <div class="footer-social">
+      <a href="#">Instagram</a>
+      <a href="#">500px</a>
+      <a href="#">Behance</a>
+    </div>
+    <span class="footer-copy">© 2026 · All rights reserved</span>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
+    <div class="lightbox-content"></div>
+  </div>
+
+  <script>
+    // Smooth reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.gallery-item, .print-item, .about-text, .about-visual').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      observer.observe(el);
+    });
+
+    // Lightbox
+    function openLightbox() {
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
+    });
+
+    // Form submit
+    function handleSubmit() {
+      const name = document.getElementById('name').value.trim();
+      if (!name) { alert('Please enter your name.'); return; }
+      alert('Message sent! I\'ll be in touch soon.');
+    }
+  </script>
+
+</body>
+</html>

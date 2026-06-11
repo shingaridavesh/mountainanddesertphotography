@@ -88,18 +88,16 @@
       z-index: 0;
     }
 
-    /* Simulated landscape silhouette */
     .hero-silhouette {
       position: absolute;
       bottom: 0; left: 0; right: 0;
       height: 55%;
       z-index: 1;
-      background: 
+      background:
         radial-gradient(ellipse 60% 80% at 20% 100%, #0a0806 0%, transparent 70%),
         radial-gradient(ellipse 80% 60% at 80% 100%, #060c10 0%, transparent 70%);
     }
 
-    /* SVG mountain range */
     .hero-mountains {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -129,10 +127,7 @@
       margin-bottom: 0.2rem;
     }
 
-    .hero-title em {
-      font-style: italic;
-      color: var(--sand);
-    }
+    .hero-title em { font-style: italic; color: var(--sand); }
 
     .hero-subtitle {
       font-family: 'Cormorant Garamond', serif;
@@ -155,17 +150,14 @@
       background: var(--sand);
       padding: 0.85rem 2rem;
       text-decoration: none;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: background 0.3s ease;
     }
 
-    .hero-cta:hover {
-      background: var(--white);
-    }
+    .hero-cta:hover { background: var(--white); }
 
     .hero-scroll {
       position: absolute;
-      bottom: 2.5rem;
-      right: 3rem;
+      bottom: 2.5rem; right: 3rem;
       z-index: 10;
       display: flex;
       flex-direction: column;
@@ -190,8 +182,8 @@
     }
 
     @keyframes scrollPulse {
-      0%, 100% { opacity: 0.4; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.1); }
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
     }
 
     /* SECTION BASE */
@@ -218,12 +210,12 @@
       opacity: 0.4;
     }
 
-    /* GALLERY */
+    /* ── GALLERY ── */
     #gallery { background: var(--surface); }
 
     .gallery-intro {
       max-width: 560px;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
     .gallery-intro h2 {
@@ -241,6 +233,43 @@
       color: var(--dust);
     }
 
+    /* TAB BAR */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(154,143,130,0.15);
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--dust);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      margin-bottom: -1px;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover { color: var(--horizon); }
+
+    .tab-btn.active {
+      color: var(--sand);
+      border-bottom-color: var(--sand);
+    }
+
+    /* TAB PANELS */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* GALLERY GRID */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -248,18 +277,19 @@
       gap: 3px;
     }
 
+    /* Default span layout for first 6 items */
+    .gallery-grid .gallery-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
+    .gallery-grid .gallery-item:nth-child(2) { grid-column: span 5; grid-row: span 1; }
+    .gallery-grid .gallery-item:nth-child(3) { grid-column: span 5; grid-row: span 1; }
+    .gallery-grid .gallery-item:nth-child(4) { grid-column: span 4; grid-row: span 2; }
+    .gallery-grid .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
+    .gallery-grid .gallery-item:nth-child(6) { grid-column: span 4; grid-row: span 2; }
+
     .gallery-item {
       overflow: hidden;
       cursor: pointer;
       position: relative;
     }
-
-    .gallery-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
-    .gallery-item:nth-child(2) { grid-column: span 5; grid-row: span 1; }
-    .gallery-item:nth-child(3) { grid-column: span 5; grid-row: span 1; }
-    .gallery-item:nth-child(4) { grid-column: span 4; grid-row: span 2; }
-    .gallery-item:nth-child(5) { grid-column: span 4; grid-row: span 2; }
-    .gallery-item:nth-child(6) { grid-column: span 4; grid-row: span 2; }
 
     .gallery-placeholder {
       width: 100%;
@@ -267,15 +297,39 @@
       transition: transform 0.6s ease;
     }
 
+    /* Use actual images like this:
+       <img src="images/mountains/peak.jpg" class="gallery-placeholder" style="object-fit:cover;" /> */
+
     .gallery-item:hover .gallery-placeholder { transform: scale(1.04); }
 
-    /* Photo placeholder gradients — each unique */
-    .p1 { background: linear-gradient(160deg, #0d1520 0%, #1a2a1a 40%, #2a1f10 100%); }
-    .p2 { background: linear-gradient(200deg, #1f1208 0%, #2d1f00 50%, #0a0d12 100%); }
-    .p3 { background: linear-gradient(140deg, #080e18 0%, #151f28 60%, #1a150a 100%); }
-    .p4 { background: linear-gradient(180deg, #1a0e06 0%, #2a1800 60%, #0d1208 100%); }
-    .p5 { background: linear-gradient(170deg, #0a1520 0%, #1a2820 50%, #1f1508 100%); }
-    .p6 { background: linear-gradient(150deg, #1a1008 0%, #281800 50%, #0e1818 100%); }
+    /* Placeholder colour swatches per category */
+    .p-m1 { background: linear-gradient(160deg, #0d1520 0%, #1a2a1a 40%, #2a1f10 100%); }
+    .p-m2 { background: linear-gradient(200deg, #0a1218 0%, #151f10 50%, #1a1508 100%); }
+    .p-m3 { background: linear-gradient(140deg, #080e18 0%, #151f28 60%, #1a150a 100%); }
+    .p-m4 { background: linear-gradient(170deg, #0d1a10 0%, #1a2010 50%, #0a0f18 100%); }
+    .p-m5 { background: linear-gradient(155deg, #0a1015 0%, #182015 50%, #121008 100%); }
+    .p-m6 { background: linear-gradient(145deg, #0f1820 0%, #1a2818 50%, #181208 100%); }
+
+    .p-sw1 { background: linear-gradient(160deg, #1f1208 0%, #2d1f00 50%, #0a0d12 100%); }
+    .p-sw2 { background: linear-gradient(180deg, #1a0e06 0%, #2a1800 60%, #0d1208 100%); }
+    .p-sw3 { background: linear-gradient(150deg, #1a1008 0%, #281800 50%, #0e1818 100%); }
+    .p-sw4 { background: linear-gradient(170deg, #200e05 0%, #301a00 50%, #100808 100%); }
+    .p-sw5 { background: linear-gradient(155deg, #1a0d05 0%, #250f00 50%, #0e1010 100%); }
+    .p-sw6 { background: linear-gradient(145deg, #180c04 0%, #221000 50%, #0c0e0e 100%); }
+
+    .p-f1 { background: linear-gradient(160deg, #081208 0%, #0f1f0a 50%, #0a1510 100%); }
+    .p-f2 { background: linear-gradient(180deg, #0a1508 0%, #152008 60%, #080f0a 100%); }
+    .p-f3 { background: linear-gradient(150deg, #081008 0%, #121808 50%, #080e0a 100%); }
+    .p-f4 { background: linear-gradient(170deg, #0a1508 0%, #182008 50%, #080f0a 100%); }
+    .p-f5 { background: linear-gradient(155deg, #081208 0%, #101a08 50%, #080e08 100%); }
+    .p-f6 { background: linear-gradient(145deg, #0a1408 0%, #141c08 50%, #080e08 100%); }
+
+    .p-c1 { background: linear-gradient(160deg, #0a0f18 0%, #101828 50%, #181008 100%); }
+    .p-c2 { background: linear-gradient(180deg, #0a1020 0%, #0f1828 60%, #180f08 100%); }
+    .p-c3 { background: linear-gradient(150deg, #080e18 0%, #0f1820 50%, #181008 100%); }
+    .p-c4 { background: linear-gradient(170deg, #0a1018 0%, #101820 50%, #180e08 100%); }
+    .p-c5 { background: linear-gradient(155deg, #08101a 0%, #0f1a22 50%, #180f08 100%); }
+    .p-c6 { background: linear-gradient(145deg, #0a1018 0%, #101820 50%, #180e08 100%); }
 
     .gallery-item-label {
       position: absolute;
@@ -297,9 +351,9 @@
       margin-top: 2rem;
       font-family: 'Courier Prime', monospace;
       font-size: 0.65rem;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.12em;
       color: var(--dust);
-      opacity: 0.6;
+      opacity: 0.5;
     }
 
     /* ABOUT */
@@ -316,16 +370,14 @@
     }
 
     .about-img-main {
-      width: 75%;
-      height: 85%;
+      width: 75%; height: 85%;
       background: linear-gradient(155deg, #1a120a 0%, #0a1520 50%, #1a1508 100%);
       position: absolute;
       bottom: 0; left: 0;
     }
 
     .about-img-accent {
-      width: 50%;
-      height: 40%;
+      width: 50%; height: 40%;
       background: linear-gradient(135deg, #2a1800 0%, #0d1a1a 100%);
       position: absolute;
       top: 0; right: 0;
@@ -335,8 +387,7 @@
     .about-accent-line {
       position: absolute;
       bottom: 2rem; right: 20%;
-      width: 1px;
-      height: 80px;
+      width: 1px; height: 80px;
       background: var(--sand);
       opacity: 0.5;
     }
@@ -350,10 +401,7 @@
       margin-bottom: 1.5rem;
     }
 
-    .about-text h2 em {
-      font-style: italic;
-      color: var(--sand);
-    }
+    .about-text h2 em { font-style: italic; color: var(--sand); }
 
     .about-text p {
       font-size: 0.88rem;
@@ -367,7 +415,7 @@
       gap: 3rem;
       margin-top: 2.5rem;
       padding-top: 2rem;
-      border-top: 1px solid rgba(154, 143, 130, 0.2);
+      border-top: 1px solid rgba(154,143,130,0.2);
     }
 
     .stat-number {
@@ -388,7 +436,7 @@
       opacity: 0.7;
     }
 
-    /* FEATURED QUOTE */
+    /* QUOTE */
     .quote-section {
       background: var(--stone);
       padding: 7rem 3rem;
@@ -434,26 +482,16 @@
       margin-top: 3rem;
     }
 
-    .print-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
+    .print-item { position: relative; overflow: hidden; cursor: pointer; }
 
-    .print-img {
-      height: 320px;
-      transition: transform 0.5s ease;
-    }
-
+    .print-img { height: 320px; transition: transform 0.5s ease; }
     .print-item:hover .print-img { transform: scale(1.03); }
 
     .pr1 { background: linear-gradient(170deg, #0f1a10 0%, #1a1208 60%, #0a0f1a 100%); }
     .pr2 { background: linear-gradient(160deg, #1a0e08 0%, #261800 50%, #0a1215 100%); }
     .pr3 { background: linear-gradient(150deg, #080e18 0%, #151a10 50%, #1a1005 100%); }
 
-    .print-info {
-      padding: 1.2rem 0;
-    }
+    .print-info { padding: 1.2rem 0; }
 
     .print-title {
       font-family: 'Cormorant Garamond', serif;
@@ -523,24 +561,12 @@
       transition: color 0.2s;
     }
 
+    .contact-detail a::before { content: '→'; }
     .contact-detail a:hover { color: var(--white); }
 
-    .contact-detail a::before {
-      content: '→';
-      font-style: normal;
-    }
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 
     .form-group label {
       font-family: 'Courier Prime', monospace;
@@ -553,7 +579,7 @@
     .form-group input,
     .form-group textarea {
       background: var(--stone);
-      border: 1px solid rgba(154, 143, 130, 0.15);
+      border: 1px solid rgba(154,143,130,0.15);
       color: var(--white);
       font-family: 'Helvetica Neue', Helvetica, sans-serif;
       font-weight: 200;
@@ -565,9 +591,7 @@
     }
 
     .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--sand);
-    }
+    .form-group textarea:focus { border-color: var(--sand); }
 
     .form-group textarea { height: 120px; }
 
@@ -594,7 +618,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid rgba(154, 143, 130, 0.1);
+      border-top: 1px solid rgba(154,143,130,0.1);
     }
 
     .footer-brand {
@@ -613,10 +637,7 @@
       opacity: 0.5;
     }
 
-    .footer-social {
-      display: flex;
-      gap: 1.5rem;
-    }
+    .footer-social { display: flex; gap: 1.5rem; }
 
     .footer-social a {
       font-family: 'Courier Prime', monospace;
@@ -640,6 +661,8 @@
       z-index: 999;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .lightbox.active { display: flex; }
@@ -660,10 +683,19 @@
 
     .lightbox-close:hover { color: var(--white); }
 
-    .lightbox-content {
-      width: min(80vw, 900px);
-      height: min(75vh, 650px);
-      background: linear-gradient(160deg, #0d1520 0%, #1a1208 50%, #0a0e18 100%);
+    .lightbox-img {
+      width: min(85vw, 1000px);
+      height: min(78vh, 700px);
+      object-fit: contain;
+      background: var(--stone);
+    }
+
+    .lightbox-caption {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--dust);
     }
 
     /* MOBILE */
@@ -671,16 +703,14 @@
       nav { padding: 1.2rem 1.5rem; }
       .nav-links { display: none; }
       section { padding: 5rem 1.5rem; }
-
       .hero { padding: 3rem 1.5rem; }
       .hero-scroll { display: none; }
 
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 180px;
-      }
-      .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
-      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .tab-btn { padding: 0.65rem 1rem; font-size: 0.6rem; }
+
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+      .gallery-grid .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .gallery-grid .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
 
       #about { grid-template-columns: 1fr; gap: 3rem; }
       .about-visual { height: 300px; }
@@ -688,7 +718,6 @@
 
       .prints-grid { grid-template-columns: 1fr; }
       .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
 
@@ -714,20 +743,16 @@
   <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-silhouette"></div>
-
-    <!-- SVG mountain silhouette -->
     <svg class="hero-mountains" viewBox="0 0 1440 300" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="300">
       <path d="M0,300 L0,220 L80,160 L160,200 L260,80 L360,140 L440,100 L520,160 L600,60 L700,120 L800,40 L900,110 L980,70 L1060,130 L1140,90 L1220,150 L1300,110 L1380,170 L1440,140 L1440,300 Z" fill="#0a0a0a"/>
       <path d="M0,300 L0,260 L100,230 L200,250 L300,210 L400,240 L500,200 L600,230 L700,180 L800,220 L900,170 L1000,210 L1100,185 L1200,220 L1300,200 L1400,230 L1440,210 L1440,300 Z" fill="#080808"/>
     </svg>
-
     <div class="hero-content">
-      <p class="hero-eyebrow">Landscape & Nature Photography</p>
+      <p class="hero-eyebrow">Landscape &amp; Nature Photography</p>
       <h1 class="hero-title">Where<br/><em>silence</em><br/>has a shape.</h1>
       <p class="hero-subtitle">Photographs from the high ridges and open desert floors of the American West.</p>
       <a href="#gallery" class="hero-cta">View the Work</a>
     </div>
-
     <div class="hero-scroll">
       <div class="scroll-line"></div>
       <span>Scroll</span>
@@ -741,33 +766,167 @@
       <h2>Light found at the edge of the world</h2>
       <p>Each frame is the result of long approaches, pre-dawn starts, and patience earned across thousands of miles of wilderness travel.</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p1"></div>
-        <div class="gallery-item-label">Cascade Range — Dawn</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p2"></div>
-        <div class="gallery-item-label">Mojave — Dusk</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p3"></div>
-        <div class="gallery-item-label">High Sierra — Storm</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p4"></div>
-        <div class="gallery-item-label">Colorado Plateau</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p5"></div>
-        <div class="gallery-item-label">White Sands — Twilight</div>
-      </div>
-      <div class="gallery-item" onclick="openLightbox()">
-        <div class="gallery-placeholder p6"></div>
-        <div class="gallery-item-label">Death Valley — Midnight</div>
+
+    <!-- TAB BAR -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" role="tab" onclick="showTab('all', this)">All Work</button>
+      <button class="tab-btn" role="tab" onclick="showTab('mountains', this)">Mountains</button>
+      <button class="tab-btn" role="tab" onclick="showTab('southwest', this)">Southwest</button>
+      <button class="tab-btn" role="tab" onclick="showTab('forest', this)">Forest</button>
+      <button class="tab-btn" role="tab" onclick="showTab('coastal', this)">Coastal</button>
+    </div>
+
+    <!-- ALL -->
+    <div class="tab-panel active" id="tab-all">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Cascade Range — Dawn', 'Mountains')">
+          <div class="gallery-placeholder p-m1"></div>
+          <div class="gallery-item-label">Cascade Range — Dawn · Mountains</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Mojave — Dusk', 'Southwest')">
+          <div class="gallery-placeholder p-sw1"></div>
+          <div class="gallery-item-label">Mojave — Dusk · Southwest</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Redwood Corridor', 'Forest')">
+          <div class="gallery-placeholder p-f1"></div>
+          <div class="gallery-item-label">Redwood Corridor · Forest</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('High Sierra — Storm', 'Mountains')">
+          <div class="gallery-placeholder p-m3"></div>
+          <div class="gallery-item-label">High Sierra — Storm · Mountains</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Point Reyes — Fog', 'Coastal')">
+          <div class="gallery-placeholder p-c1"></div>
+          <div class="gallery-item-label">Point Reyes — Fog · Coastal</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('White Sands — Twilight', 'Southwest')">
+          <div class="gallery-placeholder p-sw3"></div>
+          <div class="gallery-item-label">White Sands — Twilight · Southwest</div>
+        </div>
       </div>
     </div>
-    <p class="gallery-note">↑ Replace placeholder blocks with your own images — see deployment notes below.</p>
+
+    <!-- MOUNTAINS -->
+    <div class="tab-panel" id="tab-mountains">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Cascade Range — Dawn', 'Mountains')">
+          <div class="gallery-placeholder p-m1"></div>
+          <div class="gallery-item-label">Cascade Range — Dawn</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('High Sierra — Storm', 'Mountains')">
+          <div class="gallery-placeholder p-m2"></div>
+          <div class="gallery-item-label">High Sierra — Storm</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Lassen Peak — Winter', 'Mountains')">
+          <div class="gallery-placeholder p-m3"></div>
+          <div class="gallery-item-label">Lassen Peak — Winter</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Rocky Mountain — Alpenglow', 'Mountains')">
+          <div class="gallery-placeholder p-m4"></div>
+          <div class="gallery-item-label">Rocky Mountain — Alpenglow</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Wind River — Summer', 'Mountains')">
+          <div class="gallery-placeholder p-m5"></div>
+          <div class="gallery-item-label">Wind River — Summer</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Mt. Shasta — Pre-Dawn', 'Mountains')">
+          <div class="gallery-placeholder p-m6"></div>
+          <div class="gallery-item-label">Mt. Shasta — Pre-Dawn</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOUTHWEST -->
+    <div class="tab-panel" id="tab-southwest">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Mojave — Dusk', 'Southwest')">
+          <div class="gallery-placeholder p-sw1"></div>
+          <div class="gallery-item-label">Mojave — Dusk</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Colorado Plateau', 'Southwest')">
+          <div class="gallery-placeholder p-sw2"></div>
+          <div class="gallery-item-label">Colorado Plateau</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('White Sands — Twilight', 'Southwest')">
+          <div class="gallery-placeholder p-sw3"></div>
+          <div class="gallery-item-label">White Sands — Twilight</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Death Valley — Midnight', 'Southwest')">
+          <div class="gallery-placeholder p-sw4"></div>
+          <div class="gallery-item-label">Death Valley — Midnight</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Canyonlands — Sunset', 'Southwest')">
+          <div class="gallery-placeholder p-sw5"></div>
+          <div class="gallery-item-label">Canyonlands — Sunset</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Arches — Starlight', 'Southwest')">
+          <div class="gallery-placeholder p-sw6"></div>
+          <div class="gallery-item-label">Arches — Starlight</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOREST -->
+    <div class="tab-panel" id="tab-forest">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Redwood Corridor', 'Forest')">
+          <div class="gallery-placeholder p-f1"></div>
+          <div class="gallery-item-label">Redwood Corridor</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Olympic Rainforest — Mist', 'Forest')">
+          <div class="gallery-placeholder p-f2"></div>
+          <div class="gallery-item-label">Olympic Rainforest — Mist</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Cascade Firs — First Snow', 'Forest')">
+          <div class="gallery-placeholder p-f3"></div>
+          <div class="gallery-item-label">Cascade Firs — First Snow</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Ancient Pines — Dusk', 'Forest')">
+          <div class="gallery-placeholder p-f4"></div>
+          <div class="gallery-item-label">Ancient Pines — Dusk</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Sequoia Grove — Light Shafts', 'Forest')">
+          <div class="gallery-placeholder p-f5"></div>
+          <div class="gallery-item-label">Sequoia Grove — Light Shafts</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Alpine Meadow — Morning', 'Forest')">
+          <div class="gallery-placeholder p-f6"></div>
+          <div class="gallery-item-label">Alpine Meadow — Morning</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COASTAL -->
+    <div class="tab-panel" id="tab-coastal">
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox('Point Reyes — Fog', 'Coastal')">
+          <div class="gallery-placeholder p-c1"></div>
+          <div class="gallery-item-label">Point Reyes — Fog</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Big Sur — Storm', 'Coastal')">
+          <div class="gallery-placeholder p-c2"></div>
+          <div class="gallery-item-label">Big Sur — Storm</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Oregon Coast — Twilight', 'Coastal')">
+          <div class="gallery-placeholder p-c3"></div>
+          <div class="gallery-item-label">Oregon Coast — Twilight</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Sea Stacks — Sunrise', 'Coastal')">
+          <div class="gallery-placeholder p-c4"></div>
+          <div class="gallery-item-label">Sea Stacks — Sunrise</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Olympic Peninsula — Driftwood', 'Coastal')">
+          <div class="gallery-placeholder p-c5"></div>
+          <div class="gallery-item-label">Olympic Peninsula — Driftwood</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('Marin Headlands — Dusk', 'Coastal')">
+          <div class="gallery-placeholder p-c6"></div>
+          <div class="gallery-item-label">Marin Headlands — Dusk</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="gallery-note">↑ Replace placeholder blocks with your own images. Store photos in /images/mountains/, /images/southwest/, /images/forest/, /images/coastal/</p>
   </section>
 
   <!-- ABOUT -->
@@ -886,11 +1045,30 @@
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" onclick="closeLightbox()">✕ Close</button>
-    <div class="lightbox-content"></div>
+    <div class="lightbox-img" id="lightbox-img"></div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
   </div>
 
   <script>
-    // Smooth reveal on scroll
+    // ── TABS ──
+    function showTab(tabId, btn) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      btn.classList.add('active');
+      // re-trigger scroll animations for newly visible items
+      document.querySelectorAll('#tab-' + tabId + ' .gallery-item').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, 30);
+      });
+    }
+
+    // ── SCROLL REVEAL ──
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -898,7 +1076,7 @@
           entry.target.style.transform = 'translateY(0)';
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
     document.querySelectorAll('.gallery-item, .print-item, .about-text, .about-visual').forEach(el => {
       el.style.opacity = '0';
@@ -907,20 +1085,27 @@
       observer.observe(el);
     });
 
-    // Lightbox
-    function openLightbox() {
+    // ── LIGHTBOX ──
+    function openLightbox(title, category) {
+      document.getElementById('lightbox-caption').textContent = title + ' — ' + category;
       document.getElementById('lightbox').classList.add('active');
       document.body.style.overflow = 'hidden';
     }
+
     function closeLightbox() {
       document.getElementById('lightbox').classList.remove('active');
       document.body.style.overflow = '';
     }
+
     document.getElementById('lightbox').addEventListener('click', function(e) {
       if (e.target === this) closeLightbox();
     });
 
-    // Form submit
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // ── CONTACT FORM ──
     function handleSubmit() {
       const name = document.getElementById('name').value.trim();
       if (!name) { alert('Please enter your name.'); return; }

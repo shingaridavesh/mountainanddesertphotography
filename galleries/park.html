@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>National Park | Mountain & Desert Photography</title>
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#080808;
+    color:#f5f3ef;
+    font-family:Georgia, serif;
+}
+
+.hero{
+    height:70vh;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    letter-spacing:.15em;
+    margin:0;
+}
+
+.hero p{
+    letter-spacing:.3em;
+    color:#c7b178;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.description{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.gallery{
+    margin-top:80px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:24px;
+}
+
+.photo{
+    overflow:hidden;
+}
+
+.photo img{
+    width:100%;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+.caption{
+    padding:12px 0;
+}
+
+.caption h3{
+    margin:0;
+    font-size:.95rem;
+    letter-spacing:.08em;
+}
+
+.caption p{
+    margin-top:6px;
+    color:#aaa;
+    font-size:.85rem;
+}
+
+.back-link{
+    text-align:center;
+    padding:50px;
+}
+
+.back-link a{
+    color:#c7b178;
+    text-decoration:none;
+    letter-spacing:.15em;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="hero">
+    <div class="hero-content">
+        <h1 id="parkName"></h1>
+        <p id="parkLocation"></p>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="description" id="parkDescription"></div>
+
+    <div class="gallery" id="gallery"></div>
+
+</section>
+
+<div class="back-link">
+    <a href="../national-parks.html">← ALL NATIONAL PARKS</a>
+</div>
+
+<script src="../assets/js/parks.js"></script>
+
+</body>
+</html>

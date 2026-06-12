@@ -12,5 +12,19 @@
     "gallery": "national-parks",
     "location": "Grand Canyon National Park",
     "image": "../assets/images/national-parks/Grand-canyon/grand-canyon-storm-rainbow.jpg"
+  },
+  {
+    "id": "grand-canyon-sunrise-storm",
+    "title": "Storm brewing over Grand Canyon",
+    "gallery": "national-parks",
+    "location": "Grand Canyon National Park",
+    "image": "../assets/images/national-parks/Grand-canyon/grand-canyon-sunrise-storm.jpg"
+  },
+  {
+    "id": "grand-canyon-moran-point",
+    "title": "Beautiful sunrise over Moran Point",
+    "gallery": "national-parks",
+    "location": "Grand Canyon National Park",
+    "image": "../assets/images/national-parks/Grand-canyon/grand-canyon-moran-point.jpg"
   }
 ]

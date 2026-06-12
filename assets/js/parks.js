@@ -1,38 +1,17 @@
 const parkData = {
 
-    "joshua-tree":{
-        name:"JOSHUA TREE",
-        location:"CALIFORNIA",
-        hero:"../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg",
-        description:"A surreal desert landscape filled with twisted Joshua Trees, granite formations and dramatic skies."
-    },
+    "yosemite": {
+        name: "Yosemite",
+        subtitle: "National Park",
 
-    "arches":{
-        name:"ARCHES",
-        location:"UTAH",
-        hero:"../assets/images/national-parks/arches/hero.jpg",
-        description:"Home to more than 2,000 natural sandstone arches and iconic red-rock scenery."
-    },
+        collection:
+            "Granite and Light. A collection created throughout Yosemite Valley, Glacier Point, Tunnel View, and the High Sierra, capturing changing seasons, dramatic weather, and timeless granite landscapes.",
 
-    "canyonlands":{
-        name:"CANYONLANDS",
-        location:"UTAH",
-        hero:"../assets/images/national-parks/canyonlands/hero.jpg",
-        description:"A vast wilderness of canyons, mesas, buttes and endless desert horizons."
-    },
+        story:
+            "Yosemite is one of North America's most iconic wilderness landscapes. These photographs were created over multiple visits through winter storms, autumn color, spring runoff, and quiet evenings beneath the granite walls of the valley.",
 
-    "zion":{
-        name:"ZION",
-        location:"UTAH",
-        hero:"../assets/images/national-parks/zion/hero.jpg",
-        description:"Towering sandstone cliffs illuminated by warm desert light."
-    },
-
-    "bryce-canyon":{
-        name:"BRYCE CANYON",
-        location:"UTAH",
-        hero:"../assets/images/national-parks/bryce-canyon/hero.jpg",
-        description:"A landscape of colorful hoodoos and extraordinary geological formations."
+        hero:
+            "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
     },
 
     "grand-canyon": {
@@ -47,35 +26,40 @@ const parkData = {
 
         hero:
             "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
-    }
+    },
 
-   "yosemite":{
-        name:"YOSEMITE",
-        subtitle:"National Park",
+    "joshua-tree": {
+        name: "Joshua Tree",
+        subtitle: "National Park",
 
-        collectionTitle:"Granite and Light",
-
-        collectionSummary:
-            "A collection created throughout Yosemite Valley, Glacier Point, Tunnel View, and the High Sierra, capturing changing seasons, dramatic weather, and timeless granite landscapes.",
+        collection:
+            "Desert Sculptures. A collection exploring the surreal landscapes where the Mojave and Colorado deserts meet.",
 
         story:
-            "Yosemite is one of North America's most iconic wilderness landscapes. These photographs were created over multiple visits through winter storms, autumn color, spring runoff, and quiet evenings beneath the granite walls of the valley.",
+            "Twisted Joshua Trees, sculpted granite formations, and expansive desert skies create one of the most distinctive landscapes in the American Southwest.",
 
-        hero:"../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
+        hero:
+            "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"
     }
 
 };
 
 async function loadPark() {
 
-    const params = new URLSearchParams(window.location.search);
-    const currentPark = params.get("park");
+    const currentPark =
+        new URLSearchParams(window.location.search)
+            .get("park");
 
     const park = parkData[currentPark];
 
     if (!park) {
-        document.getElementById("gallery").innerHTML =
-            "<p>Park not found.</p>";
+
+        document.body.innerHTML = `
+            <div style="padding:4rem;text-align:center;">
+                Park not found
+            </div>
+        `;
+
         return;
     }
 
@@ -86,40 +70,33 @@ async function loadPark() {
         `${park.name}<br>${park.subtitle}`;
 
     document.getElementById("collectionText").textContent =
-        park.collection;
+        park.collection || "";
 
     document.getElementById("storyText").textContent =
-        park.story;
-        document.getElementById("storyText").textContent =
-            park.story || "";
+        park.story || "";
 
     document.getElementById("hero").style.backgroundImage =
         `url('${park.hero}')`;
 
-    const response = await fetch("../data/photos.json");
-    const photos = await response.json();
+    const response =
+        await fetch("../data/photos.json");
 
-    const gallery = document.getElementById("gallery");
+    const photos =
+        await response.json();
 
-    const parkPhotos = photos.filter(
-        photo => photo.park === currentPark
-    );
+    const gallery =
+        document.getElementById("gallery");
 
-    if (parkPhotos.length === 0) {
-
-        gallery.innerHTML = `
-            <p style="text-align:center;">
-                No photographs available yet.
-            </p>
-        `;
-
-        return;
-    }
+    const parkPhotos =
+        photos.filter(
+            photo => photo.park === currentPark
+        );
 
     parkPhotos.forEach(photo => {
 
-        gallery.insertAdjacentHTML("beforeend", `
-
+        gallery.insertAdjacentHTML(
+            "beforeend",
+            `
             <div class="photo">
 
                 <img
@@ -137,37 +114,45 @@ async function loadPark() {
                 </div>
 
             </div>
+            `
+        );
 
-        `);
+    });
+
+    const lightbox =
+        document.getElementById("lightbox");
+
+    const lightboxImg =
+        document.getElementById("lightbox-img");
+
+    document.addEventListener("click", e => {
+
+        if (
+            e.target.classList.contains(
+                "gallery-image"
+            )
+        ) {
+
+            lightboxImg.src =
+                e.target.src;
+
+            lightbox.style.display =
+                "flex";
+        }
+
+        if (
+            e.target.id === "lightbox" ||
+            e.target.classList.contains(
+                "lightbox-close"
+            )
+        ) {
+
+            lightbox.style.display =
+                "none";
+        }
 
     });
 
 }
 
 loadPark();
-
-document.addEventListener("click", function(e){
-
-    if(e.target.classList.contains("gallery-image")){
-
-        document.getElementById("lightbox-img").src =
-            e.target.src;
-
-        document.getElementById("lightbox").style.display =
-            "flex";
-    }
-
-});
-
-document.addEventListener("click", function(e){
-
-    if(
-        e.target.id === "lightbox" ||
-        e.target.classList.contains("lightbox-close")
-    ){
-
-        document.getElementById("lightbox").style.display =
-            "none";
-    }
-
-});

@@ -217,6 +217,9 @@ body{
 <script>
 const parkGrid = document.getElementById('parkGrid');
 
+console.log("parkGrid =", parkGrid);
+console.log("parkData =", parkData);
+
 Object.entries(parkData).forEach(([slug, park]) => {
 
     const card = document.createElement('a');

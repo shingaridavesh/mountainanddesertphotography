@@ -217,7 +217,7 @@ body{
 <script>
 const parkGrid = document.getElementById('parkGrid');
 
-Object.entries(parks).forEach(([slug, park]) => {
+Object.entries(parkData).forEach(([slug, park]) => {
 
     const card = document.createElement('a');
     card.href = `park.html?park=${slug}`;

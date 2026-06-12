@@ -367,3 +367,5 @@ async function loadPark() {
 }
 
 loadPark();
+
+window.parkData = parkData;

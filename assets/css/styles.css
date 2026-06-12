@@ -767,42 +767,35 @@
     .lightbox.open { display: flex; }
 
     .lb-close {
-      position: absolute;
-      top: 24px;
-      right: 24px;
+      position:absolute;
+      top:24px;
+      right:24px;
 
-      width: 44px;
-      height: 44px;
+      width:44px;
+      height:44px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.08);
 
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(8px);
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(8px);
 
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 50%;
+      color:rgba(255,255,255,.65);
 
-      color: rgba(255,255,255,0.65);
+      font-size:1.2rem;
 
-      font-size: 1.1rem;
-      font-weight: 300;
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
-      cursor: pointer;
+      cursor:pointer;
 
-      transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+      transition:.25s ease;
     }
 
-    .lb-close:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(200,169,107,0.35);
-      color: var(--white);
-      transform: scale(1.05);
+    .lb-close:hover{
+      background:rgba(255,255,255,.10);
+      color:#fff;
     }
 
     .lb-img {

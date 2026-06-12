@@ -1,5 +1,45 @@
 [
   {
+    "id": "yosemite-tunnel-view-day-storm",
+    "title": "STORM PASSING OVER TUNNEL VIEW",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosemite-tunnel-view-day-storm.jpg"
+  },
+  {
+    "id": "yosemite-half-dome-sunset-pink-light",
+    "title": "SUNSET PINK HUE OVER HALF DOME",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-sunset-pink-light.jpg"
+  },
+  {
+    "id": "yosemite-half-some-zoom-sunset",
+    "title": "PINK HALF DOME",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-some-zoom-sunset.jpg"
+  },
+  {
+    "id": "yosmite-el-capitan-storm",
+    "title": "EL CAPITAN STANDING TALL",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosmite-el-capitan-storm.jpg"
+  },
+  {
+    "id": "yosmite-fall-faraway",
+    "title": "YOSEMITE FALL WINTER RUSH",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosmite-fall-faraway.jpg"
+  },
+  {
     "id": "yosemite-half-dome-fall",
     "title": "FALL COLOR REFLECTIONS OVER HALF DOME",
     "gallery": "national-parks",

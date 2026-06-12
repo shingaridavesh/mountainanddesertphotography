@@ -109,10 +109,12 @@ body{
     display:block;
     object-fit:cover;
     transition:.35s ease;
+    cursor:pointer;
+    border-radius:4px;
 }
 
 .gallery-card:hover img{
-    transform:scale(1.01);
+    transform:scale(1.02);
 }
 
 .gallery-card-content{
@@ -129,6 +131,23 @@ body{
 .gallery-card p{
     margin-top:.5rem;
     color:#b8996a;
+}
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    cursor:pointer;
+}
+
+.lightbox img{
+    max-width:95vw;
+    max-height:95vh;
+    object-fit:contain;
 }
 
 /* MOBILE */
@@ -151,6 +170,10 @@ body{
 </head>
 
 <body>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
 
 <div class="hero">
 
@@ -184,6 +207,15 @@ within America's national parks.
 
 <script>
 
+function openLightbox(src){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox(){
+    document.getElementById('lightbox').style.display = 'none';
+}
+
 fetch('../data/photos.json')
 .then(response => response.json())
 .then(photos => {
@@ -199,7 +231,12 @@ fetch('../data/photos.json')
             card.className = 'gallery-card';
 
             card.innerHTML = `
-                <img src="${photo.image}" alt="${photo.title}">
+                <img
+                    src="${photo.image}"
+                    alt="${photo.title}"
+                    onclick="openLightbox('${photo.image}')"
+                    style="cursor:pointer">
+
                 <div class="gallery-card-content">
                     <h3>${photo.title}</h3>
                     <p>${photo.location}</p>

@@ -2,28 +2,32 @@
   {
     "id": "yosemite-half-dome-fall",
     "title": "FALL COLOR REFLECTIONS OVER HALF DOME",
-    "gallery": "yosemite",
+    "gallery": "national-parks",
+    "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
     "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
   },
   {
     "id": "grand-canyon-storm-rainbow",
     "title": "GRAND CANYON MONSOON STORM RAINBOW",
-    "gallery": "grand-canyon",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
   },
   {
     "id": "grand-canyon-sunrise-storm",
     "title": "STORM BREWING OVER GRAND CANYON",
-    "gallery": "grand-canyon",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/grand-canyon/grand-canyon-sunrise-storm.jpg"
   },
   {
     "id": "grand-canyon-moran-point",
     "title": "BEAUTIFUL SUNRISE AT MORAN POINT",
-    "gallery": "grand-canyon",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
   }
@@ -31,7 +35,8 @@
   {
     "id": "grand-canyon-point-imperial-sunrise",
     "title": "CALM SUNRISE AT POINT IMPERIAL",
-    "gallery": "grand-canyon",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/grand-canyon/grand-canyon-point-imperial-sunrise.jpg"
   }

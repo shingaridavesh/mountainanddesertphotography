@@ -210,43 +210,31 @@ body{
 
 </section>
 
-<section class="park-grid">
+<section class="park-grid" id="parkGrid"></section>
 
-```
-<a href="park.html?park=yosemite" class="park-card">
-    <img src="../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg">
-    <div class="park-info">
-        <h3>Yosemite National Park</h3>
-        <p>Explore Collection</p>
-    </div>
-</a>
+<script src="../assets/js/parks.js"></script>
 
-<a href="park.html?park=grand-canyon" class="park-card">
-    <img src="../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg">
-    <div class="park-info">
-        <h3>Grand Canyon National Park</h3>
-        <p>Explore Collection</p>
-    </div>
-</a>
+<script>
+const parkGrid = document.getElementById('parkGrid');
 
-<a href="park.html?park=joshua-tree" class="park-card">
-    <img src="../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg">
-    <div class="park-info">
-        <h3>Joshua Tree National Park</h3>
-        <p>Explore Collection</p>
-    </div>
-</a>
+Object.entries(parks).forEach(([slug, park]) => {
 
-<a href="park.html?park=zion" class="park-card">
-    <img src="../assets/images/national-parks/zion/hero.jpg">
-    <div class="park-info">
-        <h3>Zion National Park</h3>
-        <p>Explore Collection</p>
-    </div>
-</a>
-```
+    const card = document.createElement('a');
+    card.href = `park.html?park=${slug}`;
+    card.className = 'park-card';
 
-</section>
+    card.innerHTML = `
+        <img src="${park.hero}" alt="${park.name}">
+        <div class="park-info">
+            <h3>${park.name} National Park</h3>
+            <p>Explore Collection</p>
+        </div>
+    `;
+
+    parkGrid.appendChild(card);
+});
+</script>
+
 
 </body>
 </html>

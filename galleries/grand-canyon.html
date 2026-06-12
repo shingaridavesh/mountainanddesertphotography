@@ -214,6 +214,7 @@ document.getElementById('lightbox').style.display='none';
 fetch('../data/photos.json')
 .then(r=>r.json())
 .then(photos=>{
+console.log(photos);
 const grid=document.getElementById('gallery-grid');
 photos.filter(p=>p.park==='grand-canyon').forEach(photo=>{
 const card=document.createElement('div');

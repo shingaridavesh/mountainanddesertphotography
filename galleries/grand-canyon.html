@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>National Parks | Mountain & Desert Photography</title>
+<title>Yosemite National Park | Mountain & Desert Photography</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/styles.css">
@@ -17,7 +17,7 @@ body{
 }
 
 .hero{
-    min-height:85vh;
+    min-height:92vh;
     position:relative;
     background:url('../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg') center/cover;
 }
@@ -164,16 +164,30 @@ body{
 
 <section class="hero">
 <div class="hero-content">
-<a href="../index.html" class="back-link">← Back Home</a>
+<a href="national-parks.html" class="back-link">← National Parks</a>
 <div class="hero-eyebrow">Fine Art Collection</div>
 <h1>National<br>Parks</h1>
-<p>A collection of America's most extraordinary landscapes. Fine art photography from Yosemite, Grand Canyon, Zion, Bryce Canyon, Arches, Canyonlands and beyond.</p>
+<div class="hero-eyebrow">Fine Art Collection</div>
+
+<h1>Grand Canyon<br>National Park</h1>
+
+<p>
+Granite walls. Ancient forests. Cathedral light.
+A collection created throughout Yosemite Valley,
+Glacier Point, Tuolumne Meadows and the high country
+of the Sierra Nevada.
+</p>
 </div>
 </section>
 
 <section class="intro">
 <div class="intro-inner">
-National parks preserve the last great wild landscapes of North America. These photographs were created over years of exploration through alpine basins, desert canyons, ancient forests and remote wilderness.
+Yosemite is one of the world's most iconic landscape
+photography destinations. These photographs were created
+across multiple visits to Yosemite Valley, Glacier Point,
+Tunnel View and the high country of the Sierra Nevada,
+capturing moments of light, weather and season that can
+never be repeated.
 </div>
 <div class="divider"></div>
 </section>
@@ -192,7 +206,7 @@ fetch('../data/photos.json')
 .then(r=>r.json())
 .then(photos=>{
 const grid=document.getElementById('gallery-grid');
-photos.filter(p=>p.gallery==='national-parks').forEach(photo=>{
+photos.filter(p=>p.park==='grand-canyon').forEach(photo=>{
 const card=document.createElement('div');
 card.className='gallery-card';
 card.innerHTML=`

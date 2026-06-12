@@ -227,8 +227,9 @@ body{
 }
 
 .lightbox img{
-    max-width:95vw;
-    max-height:95vh;
+    max-width:80vw;
+    max-height:80vh;
+    object-fit:contain;
 }
 
 .lightbox-close{
@@ -268,6 +269,36 @@ body{
     right:0;
     text-align:center;
     color:#c8a96b;
+}
+
+.lightbox-info{
+    position:absolute;
+    bottom:35px;
+    left:0;
+    right:0;
+    text-align:center;
+}
+
+.lightbox-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:300;
+    color:#f5f3ef;
+    margin-bottom:.5rem;
+}
+
+#lightbox-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:300;
+    color:#f5f3ef;
+    margin-bottom:.5rem;
+}
+
+.lightbox-counter{
+    color:#c8a96b;
+    letter-spacing:.25em;
+    font-size:.8rem;
 }
 
 </style>
@@ -315,8 +346,14 @@ body{
 
     <button class="lightbox-next">&#10095;</button>
 
-    <div class="lightbox-counter">
-        <span id="lightbox-count"></span>
+    <div class="lightbox-info">
+
+        <h3 id="lightbox-title"></h3>
+
+        <div class="lightbox-counter">
+            <span id="lightbox-count"></span>
+        </div>
+
     </div>
 
 </div>

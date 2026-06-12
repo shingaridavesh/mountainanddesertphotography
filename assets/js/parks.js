@@ -127,6 +127,9 @@ async function loadPark() {
 
     const counter =
         document.getElementById("lightbox-count");
+    
+    const title =
+        document.getElementById("lightbox-title");
 
     let currentIndex = 0;
 
@@ -142,6 +145,9 @@ async function loadPark() {
 
         lightboxImg.src =
             parkPhotos[index].image;
+        
+        title.textContent =
+            parkPhotos[index].title || "";
 
         if(counter){
             counter.textContent =

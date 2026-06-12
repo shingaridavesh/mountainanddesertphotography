@@ -51,11 +51,19 @@ const parkData = {
         hero:"../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
     },
 
-    "yosemite":{
+   "yosemite":{
         name:"YOSEMITE",
-        location:"CALIFORNIA",
-        hero:"../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg",
-        description:"Granite monoliths, waterfalls and timeless wilderness."
+        subtitle:"National Park",
+
+        collectionTitle:"Granite and Light",
+
+        collectionSummary:
+            "A collection created throughout Yosemite Valley, Glacier Point, Tunnel View, and the High Sierra, capturing changing seasons, dramatic weather, and timeless granite landscapes.",
+
+        story:
+            "Yosemite is one of North America's most iconic wilderness landscapes. These photographs were created over multiple visits through winter storms, autumn color, spring runoff, and quiet evenings beneath the granite walls of the valley.",
+
+        hero:"../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
     }
 
 };
@@ -123,7 +131,8 @@ async function loadPark() {
                 <img
                     src="${photo.image}"
                     alt="${photo.title}"
-                    loading="lazy">
+                    loading="lazy"
+                    class="gallery-image">
 
                 <div class="caption">
 
@@ -142,3 +151,29 @@ async function loadPark() {
 }
 
 loadPark();
+
+document.addEventListener("click", function(e){
+
+    if(e.target.classList.contains("gallery-image")){
+
+        document.getElementById("lightbox-img").src =
+            e.target.src;
+
+        document.getElementById("lightbox").style.display =
+            "flex";
+    }
+
+});
+
+document.addEventListener("click", function(e){
+
+    if(
+        e.target.id === "lightbox" ||
+        e.target.classList.contains("lightbox-close")
+    ){
+
+        document.getElementById("lightbox").style.display =
+            "none";
+    }
+
+});

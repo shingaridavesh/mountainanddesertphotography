@@ -152,8 +152,14 @@ body{
 </head>
 <body>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-<img id="lightbox-img">
+<div id="lightbox" class="lightbox">
+
+    <button class="lb-close" onclick="closeLightbox(event)">
+        ✕
+    </button>
+
+    <img id="lightbox-img" onclick="event.stopPropagation()">
+
 </div>
 
 <section class="hero">

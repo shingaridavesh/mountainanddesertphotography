@@ -125,33 +125,98 @@ async function loadPark() {
     const lightboxImg =
         document.getElementById("lightbox-img");
 
+    const counter =
+        document.getElementById("lightbox-count");
+
+    let currentIndex = 0;
+
+    function showImage(index){
+
+        if(index < 0)
+            index = parkPhotos.length - 1;
+
+        if(index >= parkPhotos.length)
+            index = 0;
+
+        currentIndex = index;
+
+        lightboxImg.src =
+            parkPhotos[index].image;
+
+        if(counter){
+            counter.textContent =
+                `${index + 1} / ${parkPhotos.length}`;
+        }
+    }
+
     document.addEventListener("click", e => {
 
-        if (
+        if(
             e.target.classList.contains(
                 "gallery-image"
             )
-        ) {
+        ){
 
-            lightboxImg.src =
-                e.target.src;
+            const images =
+                [...document.querySelectorAll(".gallery-image")];
+
+            currentIndex =
+                images.indexOf(e.target);
+
+            showImage(currentIndex);
 
             lightbox.style.display =
                 "flex";
         }
 
-        if (
+        if(
+            e.target.classList.contains(
+                "lightbox-next"
+            )
+        ){
+            showImage(currentIndex + 1);
+        }
+
+        if(
+            e.target.classList.contains(
+                "lightbox-prev"
+            )
+        ){
+            showImage(currentIndex - 1);
+        }
+
+        if(
             e.target.id === "lightbox" ||
             e.target.classList.contains(
                 "lightbox-close"
             )
-        ) {
-
+        ){
             lightbox.style.display =
                 "none";
         }
 
     });
+
+    document.addEventListener(
+        "keydown",
+        e => {
+
+            if(
+                lightbox.style.display !==
+                "flex"
+            ) return;
+
+            if(e.key === "ArrowRight")
+                showImage(currentIndex + 1);
+
+            if(e.key === "ArrowLeft")
+                showImage(currentIndex - 1);
+
+            if(e.key === "Escape")
+                lightbox.style.display =
+                    "none";
+        }
+    );
 
 }
 

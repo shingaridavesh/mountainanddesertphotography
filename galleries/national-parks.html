@@ -1,13 +1,32 @@
+
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
 <meta charset="utf-8">
 <title>National Parks</title>
-<link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
-<nav><a href="../index.html">Home</a></nav>
-<div class="section-wrap" style="padding-top:4rem;padding-bottom:4rem;">
-<h1 class="section-title">National Parks</h1>
-<p>Add photos to data/photos.json and assets/images/</p>
-</div>
-</body></html>
+<h1>National Parks</h1>
+<div id="gallery"></div>
+
+<script>
+fetch('../data/photos.json')
+.then(r => r.json())
+.then(photos => {
+  const gallery = document.getElementById('gallery');
+
+  photos
+    .filter(p => p.gallery === 'national-parks')
+    .forEach(photo => {
+      gallery.innerHTML += `
+        <div>
+          <img src="${photo.image}" style="max-width:600px;width:100%">
+          <h3>${photo.title}</h3>
+          <p>${photo.location}</p>
+        </div>
+      `;
+    });
+});
+</script>
+</body>
+</html>

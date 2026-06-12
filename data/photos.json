@@ -1,7 +1,9 @@
-{
-  "id": "yosemite-half-dome-fall",
-  "title": "Yosemite Half Dome Fall Color",
-  "gallery": "national-parks",
-  "location": "Yosemite National Park",
-  "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
-}
+[
+  {
+    "id": "yosemite-half-dome-fall",
+    "title": "Yosemite Half Dome Fall Color",
+    "gallery": "national-parks",
+    "location": "Yosemite National Park",
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
+  }
+]

@@ -118,21 +118,85 @@ body{
     letter-spacing:.15em;
 }
 
+.park-subtitle{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.5rem;
+    font-weight:300;
+    color:#c8a96b;
+    letter-spacing:.15em;
+}
+
+.collection-intro{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    padding:6rem 2rem 3rem;
+}
+
+.collection-intro h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:3rem;
+    font-weight:300;
+    color:#c8a96b;
+    margin-bottom:2rem;
+}
+
+.collection-intro p{
+    line-height:2;
+    color:#ece6dc;
+    font-size:1.1rem;
+}
+
+.story{
+    max-width:850px;
+    margin:auto;
+    padding:0 2rem 5rem;
+}
+
+.story p{
+    line-height:2.1;
+    color:#b9b0a0;
+}
+
 </style>
 </head>
 
 <body>
 
 <section class="hero" id="hero">
+
     <div class="hero-content">
+
+        <a href="national-parks.html" class="back-link">
+            ← All National Parks
+        </a>
+
         <h1 id="parkName"></h1>
-        <p id="parkLocation"></p>
+
+        <div
+            class="park-subtitle"
+            id="parkSubtitle">
+        </div>
+
     </div>
+
 </section>
 
 <section class="container">
 
-    <div class="description" id="parkDescription"></div>
+    <section class="collection-intro">
+
+        <h2 id="collectionTitle"></h2>
+
+        <p id="collectionSummary"></p>
+
+    </section>
+
+    <section class="story">
+
+        <p id="storyText"></p>
+
+    </section>
 
     <div class="gallery" id="gallery"></div>
 

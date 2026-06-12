@@ -36,11 +36,20 @@ const parkData = {
     },
 
     "grand-canyon":{
+
         name:"GRAND CANYON",
-        location:"ARIZONA",
-        hero:"../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg",
-        description:"One of the world's most spectacular landscapes carved by the Colorado River."
-    },
+        subtitle:"National Park",
+
+        collectionTitle:"Time Written in Stone",
+
+        collectionSummary:
+            "A collection created throughout the South Rim, North Rim, Desert View, Moran Point, and Point Imperial, capturing dramatic storms, canyon light, and moments of stillness across one of the world's most extraordinary landscapes.",
+
+        story:
+            "The Grand Canyon is a landscape measured not only in miles, but in time. These photographs were created over multiple visits through changing seasons, monsoon storms, sunrise light, and quiet evenings along the canyon rim. Each image represents a unique encounter with one of North America's most iconic natural wonders.",
+
+        hero:"../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
+    }
 
     "yosemite":{
         name:"YOSEMITE",
@@ -73,8 +82,17 @@ async function loadPark() {
     document.getElementById("parkLocation").textContent =
         park.location;
 
-    document.getElementById("parkDescription").textContent =
-        park.description;
+    document.getElementById("parkSubtitle").textContent =
+        park.subtitle;
+
+    document.getElementById("collectionTitle").textContent =
+        park.collectionTitle;
+
+    document.getElementById("collectionSummary").textContent =
+        park.collectionSummary;
+
+    document.getElementById("storyText").textContent =
+        park.story;
 
     document.getElementById("hero").style.backgroundImage =
         `url('${park.hero}')`;

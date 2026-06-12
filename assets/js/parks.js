@@ -79,9 +79,6 @@ async function loadPark() {
     document.getElementById("parkName").textContent =
         park.name;
 
-    document.getElementById("parkLocation").textContent =
-        park.location;
-
     document.getElementById("parkSubtitle").textContent =
         park.subtitle || "National Park";
 

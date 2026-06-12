@@ -1,38 +1,36 @@
 const parkData = {
 
-"grand-canyon": {
-    name: "Grand Canyon",
-    subtitle: "National Park",
+    "grand-canyon": {
+        name: "Grand Canyon",
+        subtitle: "National Park",
 
-    collectionTitle: "Time Written in Stone",
+        collectionTitle: "Time Written in Stone",
 
-    collection:
-        "A collection created throughout the South Rim, North Rim, Desert View, Moran Point, and Point Imperial, capturing dramatic storms, canyon light, and moments of stillness across one of the world's most extraordinary landscapes.",
+        collection:
+            "A collection created throughout the South Rim, North Rim, Desert View, Moran Point, and Point Imperial, capturing dramatic storms, canyon light, and moments of stillness across one of the world's most extraordinary landscapes.",
 
-    story:
-        "The Grand Canyon is a landscape measured not only in miles, but in time. These photographs were created over multiple visits through changing seasons, monsoon storms, sunrise light, and quiet evenings along the canyon rim. Each image represents a unique encounter with one of North America's most iconic natural wonders.",
+        story:
+            "The Grand Canyon is a landscape measured not only in miles, but in time. These photographs were created over multiple visits through changing seasons, monsoon storms, sunrise light, and quiet evenings along the canyon rim. Each image represents a unique encounter with one of North America's most iconic natural wonders.",
 
-    hero:
-        "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
-    ```
+        hero:
+            "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"    
 
     },
 
     "joshua-tree": {
-    name: "Joshua Tree",
-    subtitle: "National Park",
+        name: "Joshua Tree",
+        subtitle: "National Park",
 
-    collectionTitle: "Desert Sculptures",
+        collectionTitle: "Desert Sculptures",
 
-    collection:
-        "A collection exploring the surreal landscapes where the Mojave and Colorado deserts meet, featuring sculpted granite formations, iconic Joshua Trees, and expansive desert skies.",
+        collection:
+            "A collection exploring the surreal landscapes where the Mojave and Colorado deserts meet, featuring sculpted granite formations, iconic Joshua Trees, and expansive desert skies.",
 
-    story:
-        "Joshua Tree National Park is a place of striking contrasts where rugged mountains, ancient desert plants, and extraordinary light converge. These photographs were created during golden sunrises, vibrant sunsets, moonlit nights, and quiet desert mornings, capturing the timeless character of one of the Southwest's most distinctive landscapes.",
+        story:
+            "Joshua Tree National Park is a place of striking contrasts where rugged mountains, ancient desert plants, and extraordinary light converge. These photographs were created during golden sunrises, vibrant sunsets, moonlit nights, and quiet desert mornings, capturing the timeless character of one of the Southwest's most distinctive landscapes.",
 
-    hero:
-        "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"
-    ```
+        hero:
+            "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"        
 
     },
 
@@ -207,6 +205,9 @@ async function loadPark() {
 
     document.getElementById("parkTitle").innerHTML =
         `${park.name}<br>${park.subtitle}`;
+
+    document.getElementById("collectionTitle").textContent =
+        park.collectionTitle || "";
 
     document.getElementById("collectionText").textContent =
         park.collection || "";

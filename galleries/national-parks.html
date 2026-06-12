@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +11,17 @@
 <link rel="stylesheet" href="../assets/css/styles.css">
 
 <style>
+
 body{
     background:#080808;
     color:#f5f3ef;
     margin:0;
 }
 
+/* HERO */
+
 .hero{
-    height:70vh;
+    height:50vh;
     background-image:url('../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg');
     background-size:cover;
     background-position:center;
@@ -29,8 +34,8 @@ body{
     inset:0;
     background:linear-gradient(
         to bottom,
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.65)
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.70)
     );
 }
 
@@ -47,66 +52,99 @@ body{
 
 .hero h1{
     font-size:4rem;
+    letter-spacing:2px;
     margin:0;
-    color:white;
 }
 
 .hero p{
-    color:#d8c9aa;
-    font-size:1.1rem;
     margin-top:1rem;
+    color:#d8c9aa;
 }
 
 .back-link{
     position:absolute;
     top:30px;
     left:30px;
+    z-index:3;
     color:#d8c9aa;
     text-decoration:none;
-    z-index:3;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:2rem;
-    max-width:1400px;
+/* INTRO */
+
+.intro{
+    padding:5rem 2rem;
+}
+
+.intro-inner{
+    max-width:850px;
     margin:auto;
-    padding:4rem 2rem;
+    text-align:center;
+    line-height:1.9;
+    color:#bfb8ae;
+    font-size:1.05rem;
+}
+
+/* GALLERY */
+
+.gallery-grid{
+    max-width:1600px;
+    margin:auto;
+    padding:2rem 3rem 6rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(500px,1fr));
+    gap:4rem;
 }
 
 .gallery-card{
-    background:#111;
-    border:1px solid rgba(255,255,255,.08);
-    overflow:hidden;
-    transition:all .3s ease;
-}
-
-.gallery-card:hover{
-    transform:translateY(-5px);
+    background:none;
+    border:none;
 }
 
 .gallery-card img{
     width:100%;
-    height:300px;
-    object-fit:cover;
     display:block;
+    object-fit:cover;
+    transition:.35s ease;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.01);
 }
 
 .gallery-card-content{
-    padding:1rem;
+    text-align:center;
+    padding-top:1.25rem;
 }
 
 .gallery-card h3{
     margin:0;
-    color:#fff;
+    font-size:1.25rem;
+    font-weight:400;
 }
 
 .gallery-card p{
     margin-top:.5rem;
     color:#b8996a;
 }
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.gallery-grid{
+    grid-template-columns:1fr;
+    padding:2rem 1.5rem 4rem;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -118,15 +156,31 @@ body{
 </a>
 
 <div class="hero-content">
-    <h1>National Parks</h1>
-    <p>America's most iconic protected landscapes</p>
+<h1>National Parks</h1>
+<p>America's Most Iconic Protected Landscapes</p>
 </div>
 
 </div>
+
+<section class="intro">
+
+<div class="intro-inner">
+
+<p>
+From the granite walls of Yosemite to the vast desert
+canyons of the American Southwest, these photographs
+celebrate the beauty, scale, and quiet moments found
+within America's national parks.
+</p>
+
+</div>
+
+</section>
 
 <div id="gallery-grid" class="gallery-grid"></div>
 
 <script>
+
 fetch('../data/photos.json')
 .then(response => response.json())
 .then(photos => {
@@ -152,6 +206,7 @@ fetch('../data/photos.json')
             grid.appendChild(card);
         });
 });
+
 </script>
 
 </body>

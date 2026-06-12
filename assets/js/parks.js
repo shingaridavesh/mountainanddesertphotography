@@ -366,6 +366,12 @@ async function loadPark() {
 
 }
 
-loadPark();
-
 window.parkData = parkData;
+
+const currentPark =
+    new URLSearchParams(window.location.search)
+        .get("park");
+
+if (currentPark) {
+    loadPark();
+}

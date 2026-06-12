@@ -49,7 +49,7 @@ const parkData = {
             "The Grand Canyon is a landscape measured not only in miles, but in time. These photographs were created over multiple visits through changing seasons, monsoon storms, sunrise light, and quiet evenings along the canyon rim. Each image represents a unique encounter with one of North America's most iconic natural wonders.",
 
         hero:"../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
-    }
+    },
 
     "yosemite":{
         name:"YOSEMITE",
@@ -83,16 +83,16 @@ async function loadPark() {
         park.location;
 
     document.getElementById("parkSubtitle").textContent =
-        park.subtitle;
+        park.subtitle || "National Park";
 
     document.getElementById("collectionTitle").textContent =
-        park.collectionTitle;
+        park.collectionTitle || park.name;
 
     document.getElementById("collectionSummary").textContent =
-        park.collectionSummary;
+        park.collectionSummary || park.description || "";
 
     document.getElementById("storyText").textContent =
-        park.story;
+        park.story || "";
 
     document.getElementById("hero").style.backgroundImage =
         `url('${park.hero}')`;

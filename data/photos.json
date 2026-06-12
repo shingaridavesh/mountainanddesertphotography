@@ -6,4 +6,12 @@
     "location": "Yosemite National Park",
     "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
   }
+
+    {
+    "id": "grand-canyon-storm-rainbow",
+    "title": "Rainbow over Grand Canyon during Monsoon Storm",
+    "gallery": "national-parks",
+    "location": "Grand Canyon National Park",
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
+  }
 ]

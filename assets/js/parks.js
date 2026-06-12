@@ -35,21 +35,19 @@ const parkData = {
         description:"A landscape of colorful hoodoos and extraordinary geological formations."
     },
 
-    "grand-canyon":{
+    "grand-canyon": {
+        name: "Grand Canyon",
+        subtitle: "National Park",
 
-        name:"GRAND CANYON",
-        subtitle:"National Park",
-
-        collectionTitle:"Time Written in Stone",
-
-        collectionSummary:
-            "A collection created throughout the South Rim, North Rim, Desert View, Moran Point, and Point Imperial, capturing dramatic storms, canyon light, and moments of stillness across one of the world's most extraordinary landscapes.",
+        collection:
+            "Time Written in Stone. A collection created throughout the South Rim, North Rim, Desert View, Moran Point, and Point Imperial, capturing dramatic storms, canyon light, and moments of stillness across one of the world's most extraordinary landscapes.",
 
         story:
             "The Grand Canyon is a landscape measured not only in miles, but in time. These photographs were created over multiple visits through changing seasons, monsoon storms, sunrise light, and quiet evenings along the canyon rim. Each image represents a unique encounter with one of North America's most iconic natural wonders.",
 
-        hero:"../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
-    },
+        hero:
+            "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
+    }
 
    "yosemite":{
         name:"YOSEMITE",
@@ -84,20 +82,16 @@ async function loadPark() {
     document.title =
         `${park.name} | Mountain & Desert Photography`;
 
-    document.getElementById("parkName").textContent =
-        park.name;
+    document.getElementById("parkTitle").innerHTML =
+        `${park.name}<br>${park.subtitle}`;
 
-    document.getElementById("parkSubtitle").textContent =
-        park.subtitle || "National Park";
-
-    document.getElementById("collectionTitle").textContent =
-        park.collectionTitle || park.name;
-
-    document.getElementById("collectionSummary").textContent =
-        park.collectionSummary || park.description || "";
+    document.getElementById("collectionText").textContent =
+        park.collection;
 
     document.getElementById("storyText").textContent =
-        park.story || "";
+        park.story;
+        document.getElementById("storyText").textContent =
+            park.story || "";
 
     document.getElementById("hero").style.backgroundImage =
         `url('${park.hero}')`;

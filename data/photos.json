@@ -83,7 +83,7 @@
     "id": "north-cascade-backpacking",
     "title": "NORTH CASCADE",
     "gallery": "national-parks",
-    "park": "north-cascade",
+    "park": "north-cascades",
     "location": "NORTH CASCADE NATIONAL PARK",
     "image": "../assets/images/national-parks/north-cascade/north-cascade-backpacking.jpg"
   } ,
@@ -91,7 +91,7 @@
     "id": "north-cascade-photographer",
     "title": "NORTH CASCADE GRANDEUR",
     "gallery": "national-parks",
-    "park": "north-cascade",
+    "park": "north-cascades",
     "location": "NORTH CASCADE NATIONAL PARK",
     "image": "../assets/images/national-parks/north-cascade/north-cascade-photographer.jpg"
   }

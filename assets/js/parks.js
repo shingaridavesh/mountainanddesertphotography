@@ -96,7 +96,7 @@ const parkData = {
             "Often called the American Alps, North Cascades National Park offers a landscape of dramatic elevation and untouched wilderness. These photographs capture fleeting mountain light, alpine color, and the raw beauty of a region shaped by ice, water, and time.",
 
         hero:
-            "../assets/images/national-parks/north-cascade/north-cascade-backpacking.jpg"
+            "../assets/images/national-parks/north-cascades/north-cascade-backpacking.jpg"
     },
 
     "rainier": {

@@ -94,5 +94,45 @@
     "park": "north-cascades",
     "location": "NORTH CASCADE NATIONAL PARK",
     "image": "../assets/images/national-parks/north-cascades/north-cascade-photographer.jpg"
+  } ,
+  {
+    "id": "redwood-forest-trail",
+    "title": "WALK AMONG GIANTS",
+    "gallery": "national-parks",
+    "park": "redwood",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/redwood/redwood-forest-trail.jpg"
+  } ,
+  {
+    "id": "redwoods-sign-big-trees",
+    "title": "BIG TREES",
+    "gallery": "national-parks",
+    "park": "redwood",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/redwood/redwoods-sign-big-trees.jpg"
+  } ,
+  {
+    "id": "redwood-dense-forest",
+    "title": "WHERE LIGHT FINDS THE FOREST",
+    "gallery": "national-parks",
+    "park": "redwood",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/redwood/redwood-dense-forest.jpg"
+  } ,
+  {
+    "id": "redwoods_green_tapestry",
+    "title": "GREEN TAPESTRY",
+    "gallery": "national-parks",
+    "park": "redwood",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/redwood/redwoods_green_tapestry.jpg"
+  } ,
+  {
+    "id": "redwoods-fern-canyon",
+    "title": "FERN CANYON",
+    "gallery": "national-parks",
+    "park": "redwood",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/redwood/redwoods-fern-canyon.jpg"
   }
 ]

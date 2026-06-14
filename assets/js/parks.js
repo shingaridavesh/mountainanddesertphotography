@@ -99,6 +99,22 @@ const parkData = {
             "../assets/images/national-parks/north-cascades/north-cascade-backpacking.jpg"
     },
 
+    "redwood": {
+        name: "Redwood",
+        subtitle: "National Park",
+
+        collectionTitle: "Giants of the Coast",
+
+        collection:
+            "A collection featuring ancient redwood groves, fern-covered forests, misty trails, and quiet streams that capture the grandeur and serenity of California's coastal wilderness.",
+
+        story:
+            "Redwood National Park protects some of the tallest trees on Earth, where towering giants have stood for centuries beneath a canopy shaped by fog, rain, and time. Created among cathedral-like forests, peaceful groves, and the rugged northern California coast, these photographs celebrate the scale, beauty, and timeless presence of these remarkable landscapes.",
+
+        hero:
+            "../assets/images/national-parks/redwood/redwood-forest-trail.jpg"
+    },
+
     "rainier": {
         name: "Mount Rainier",
         subtitle: "National Park",
@@ -177,23 +193,7 @@ const parkData = {
 
         hero:
             "../assets/images/national-parks/saguaro/saguaro-sunset-cactus.jpg"
-    },
-
-    "redwood": {
-    name: "Redwood",
-    subtitle: "National Park",
-
-    collectionTitle: "Giants of the Coast",
-
-    collection:
-        "A collection featuring ancient redwood groves, fern-covered forests, misty trails, and quiet streams that capture the grandeur and serenity of California's coastal wilderness.",
-
-    story:
-        "Redwood National Park protects some of the tallest trees on Earth, where towering giants have stood for centuries beneath a canopy shaped by fog, rain, and time. Created among cathedral-like forests, peaceful groves, and the rugged northern California coast, these photographs celebrate the scale, beauty, and timeless presence of these remarkable landscapes.",
-
-    hero:
-        "../assets/images/national-parks/redwood/redwood-forest-trail.jpg"
-}
+    }    
 
 };
 

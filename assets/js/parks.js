@@ -160,7 +160,7 @@ const parkData = {
             "Olympic National Park contains some of the most varied landscapes in North America. These photographs explore its ancient forests, dramatic Pacific shores, and remote mountain environments, capturing the atmosphere and beauty that make Olympic truly unique.",
 
         hero:
-            "../assets/images/national-parks/olympic/olympic-ruby-beach-sunset.jpg"
+            "../assets/images/national-parks/olympic/olympic-rainforest.jpg"
     },
 
     "glacier": {

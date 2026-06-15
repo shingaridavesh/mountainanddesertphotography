@@ -224,7 +224,7 @@ const parkData = {
             "Rocky Mountain National Park offers a landscape defined by elevation, wilderness, and dramatic seasonal change. These photographs capture alpine light, rugged terrain, and the enduring character of one of America's most beloved mountain parks.",
 
         hero:
-            "../assets/images/national-parks/rocky-mountain/rocky-mountain-alpine-lake.jpg"
+            "../assets/images/national-parks/rocky-mountain/rocky-mountain-sunriose-reflection.jpg"
     },
 
     "petrified-forest": {

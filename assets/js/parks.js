@@ -144,7 +144,7 @@ const parkData = {
             "Mount Rainier rises above the landscape with remarkable presence and scale. These photographs span multiple seasons, capturing vibrant summer blooms, dramatic weather, and quiet moments when the mountain emerges above a sea of clouds.",
 
         hero:
-            "../assets/images/national-parks/rainier/rainier-wildflowers-sunrise.jpg"
+            "../assets/images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg"
     },
 
     "olympic": {

@@ -80,7 +80,7 @@ const parkData = {
             "Canyonlands preserves one of the most dramatic landscapes in the American West. Created from overlooks, remote viewpoints, and canyon rims, these photographs capture the rugged beauty, solitude, and grandeur that define this remarkable wilderness.",
 
         hero:
-            "../assets/images/national-parks/canyonlands/canyonlands-mesa-sunrise.jpg"
+            "../assets/images/national-parks/canyonlands/canyonland-moody-sunset.jpg"
     },
 
     "bryce-canyon": {

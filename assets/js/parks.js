@@ -48,7 +48,7 @@ const parkData = {
             "Yosemite is one of North America's most iconic wilderness landscapes. These photographs were created over multiple visits through winter storms, autumn color, spring runoff, and quiet evenings beneath the granite walls of the valley.",
 
         hero:
-            "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
+            "../assets/images/national-parks/yosemite/yosemite-half-some-zoom-sunset.jpg"
     },
 
     "arches": {

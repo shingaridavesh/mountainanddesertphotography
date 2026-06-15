@@ -240,7 +240,7 @@ const parkData = {
             "Petrified Forest National Park preserves a remarkable record of Earth's distant past. These photographs highlight the vibrant colors, intricate textures, and timeless beauty found throughout this extraordinary landscape of stone and history.",
 
         hero:
-            "../assets/images/national-parks/petrified-forest/petrified-forest-painted-desert.jpg"
+            "../assets/images/national-parks/petrified-forest/petrified-wood-storm-sunset.jpg"
     },
 
     "saguaro": {

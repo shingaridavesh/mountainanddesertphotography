@@ -256,7 +256,7 @@ const parkData = {
             "Saguaro National Park protects one of the world's most distinctive desert ecosystems. Created during golden hour, monsoon season, and quiet desert evenings, these photographs celebrate the resilience, beauty, and timeless spirit of the Southwest.",
 
         hero:
-            "../assets/images/national-parks/saguaro/saguaro-sunset-cactus.jpg"
+            "../assets/images/national-parks/saguaro/saguaro-fields.jpg"
     },
     
     "lassen-volcanic": {

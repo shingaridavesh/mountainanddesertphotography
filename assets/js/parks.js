@@ -64,7 +64,7 @@ const parkData = {
             "Arches National Park is home to one of the world's most extraordinary concentrations of natural stone arches. These photographs were created during sunrise, sunset, and passing desert storms, revealing the timeless beauty and sculptural elegance of this iconic red rock landscape.",
 
         hero:
-            "../assets/images/national-parks/arches/arches-delicate-arch-sunrise.jpg"
+            "../assets/images/national-parks/arches/arches-wide.jpg"
     },
 
     "canyonlands": {

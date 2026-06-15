@@ -208,7 +208,7 @@ const parkData = {
             "Yellowstone National Park protects an extraordinary landscape where geothermal wonders, abundant wildlife, and rugged wilderness coexist across one of the world's largest active volcanic systems. Created among steaming basins, alpine rivers, sweeping valleys, and dramatic canyons, these photographs celebrate the energy, diversity, and wild spirit of America's first national park.",
 
         hero:
-            "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic-sunrise.jpg"
+            "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic.jpg"
     },
 
     "rocky-mountain": {

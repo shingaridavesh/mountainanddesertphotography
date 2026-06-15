@@ -179,6 +179,38 @@ const parkData = {
             "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg"
     },
 
+    "grand-teton": {
+        name: "Grand Teton",
+        subtitle: "National Park",
+
+        collectionTitle: "The Teton Skyline",
+
+        collection:
+            "A collection featuring jagged mountain peaks, mirror-like lakes, winding rivers, and expansive valleys that showcase the dramatic beauty of the Teton Range.",
+
+        story:
+            "Grand Teton National Park protects one of North America's most iconic mountain landscapes, where granite peaks rise abruptly above sagebrush plains and pristine waters. Created during sunrise reflections, stormy afternoons, and quiet moments along alpine lakeshores, these photographs celebrate the grandeur, elegance, and timeless character of the American West.",
+
+        hero:
+            "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg"
+    },
+
+    "yellowstone": {
+        name: "Yellowstone",
+        subtitle: "National Park",
+
+        collectionTitle: "Geothermal Wilderness",
+
+        collection:
+            "A collection featuring erupting geysers, colorful hot springs, powerful waterfalls, wildlife, and vast wilderness landscapes shaped by the forces beneath the Earth's surface.",
+
+        story:
+            "Yellowstone National Park protects an extraordinary landscape where geothermal wonders, abundant wildlife, and rugged wilderness coexist across one of the world's largest active volcanic systems. Created among steaming basins, alpine rivers, sweeping valleys, and dramatic canyons, these photographs celebrate the energy, diversity, and wild spirit of America's first national park.",
+
+        hero:
+            "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic-sunrise.jpg"
+    },
+
     "rocky-mountain": {
         name: "Rocky Mountain",
         subtitle: "National Park",

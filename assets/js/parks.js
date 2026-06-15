@@ -147,6 +147,22 @@ const parkData = {
             "../assets/images/national-parks/olympic/olympic-ruby-beach-sunset.jpg"
     },
 
+    "glacier": {
+        name: "Glacier",
+        subtitle: "National Park",
+
+        collectionTitle: "Land of Ice and Peaks",
+
+        collection:
+            "A collection featuring rugged alpine peaks, glacial lakes, wildflower meadows, and dramatic mountain landscapes that define the untamed beauty of the Northern Rockies.",
+
+        story:
+            "Glacier National Park preserves one of North America's most spectacular mountain wildernesses, where towering summits, turquoise lakes, and ancient glaciers shape the landscape. Created along Going-to-the-Sun Road, high alpine trails, and quiet lakeshores, these photographs celebrate the grandeur, solitude, and ever-changing light of the Crown of the Continent.",
+
+        hero:
+            "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg"
+    },
+
     "rocky-mountain": {
         name: "Rocky Mountain",
         subtitle: "National Park",

@@ -225,7 +225,23 @@ const parkData = {
 
         hero:
             "../assets/images/national-parks/saguaro/saguaro-sunset-cactus.jpg"
-    }    
+    },
+    
+    "lassen-volcanic": {
+        name: "Lassen Volcanic",
+        subtitle: "National Park",
+
+        collectionTitle: "Fire and Stone",
+
+        collection:
+            "A collection featuring volcanic peaks, alpine lakes, steaming hydrothermal landscapes, and rugged wilderness shaped by the powerful forces that continue to define this remarkable corner of the Cascade Range.",
+
+        story:
+            "Lassen Volcanic National Park preserves a rare landscape where all four major types of volcanoes can be found within a single protected area. Created among volcanic summits, crystal-clear lakes, wildflower meadows, and geothermal features, these photographs celebrate the raw beauty, geological wonder, and quiet solitude of one of America's most unique national parks.",
+
+        hero:
+            "../assets/images/national-parks/lassen-volcanic/lassen-colorful-rolling-hills.jpg"
+    }
 
 };
 

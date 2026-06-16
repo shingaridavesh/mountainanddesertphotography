@@ -142,5 +142,13 @@
     "park": "bryce-canyon",
     "location": "BRYCE CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/bryce-canyon/bryce-sunset-snow.jpg"
+  },
+  {
+    "id": "canyonland-moody-sunset",
+    "title": "CANYON SERENITY",
+    "gallery": "national-parks",
+    "park": "canyonlands",
+    "location": "CANYONLAND NATIONAL PARK",
+    "image": "../assets/images/national-parks/canyonlands/canyonland-moody-sunset.jpg"
   }
 ]

@@ -150,5 +150,13 @@
     "park": "canyonlands",
     "location": "CANYONLAND NATIONAL PARK",
     "image": "../assets/images/national-parks/canyonlands/canyonland-moody-sunset.jpg"
+  },
+  {
+    "id": "glacier-sunrise-reflection",
+    "title": "REFLECTION",
+    "gallery": "national-parks",
+    "park": "glacier",
+    "location": "GLACIER NATIONAL PARK",
+    "image": "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg"
   }
 ]

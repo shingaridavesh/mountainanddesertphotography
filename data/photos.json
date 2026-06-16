@@ -158,5 +158,13 @@
     "park": "glacier",
     "location": "GLACIER NATIONAL PARK",
     "image": "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg"
+  },
+  {
+    "id": "teton-barn-beautiful-sunrise",
+    "title": "BARN",
+    "gallery": "national-parks",
+    "park": "grand-teton",
+    "location": "GRAND TETON NATIONAL PARK",
+    "image": "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg"
   }
 ]

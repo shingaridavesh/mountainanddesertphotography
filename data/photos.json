@@ -166,5 +166,21 @@
     "park": "grand-teton",
     "location": "GRAND TETON NATIONAL PARK",
     "image": "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg"
+  },
+  {
+    "id": "yellowstone-grand-prismatic",
+    "title": "NATURE COLORS",
+    "gallery": "national-parks",
+    "park": "yellowstone",
+    "location": "YELLOWSTONE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic.jpg"
+  },
+  {
+    "id": "rocky-mountain-sunriose-reflection",
+    "title": "REFLCTION",
+    "gallery": "national-parks",
+    "park": "rocky-mountain",
+    "location": "ROCKY MOUNTAIN NATIONAL PARK",
+    "image": "../assets/images/national-parks/rocky-mountain/rocky-mountain-sunriose-reflection.jpg"
   }
 ]

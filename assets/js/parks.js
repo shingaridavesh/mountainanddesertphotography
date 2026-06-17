@@ -395,7 +395,7 @@ const galleryData = {
         name: "Mountain Landscapes",
 
         hero:
-            "../assets/images/galleries/mountains/hero.jpg",
+            "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg",
 
         collection:
             "A collection of alpine light, rugged peaks, changing seasons, and quiet moments found throughout the mountains of the American West.",

@@ -191,6 +191,8 @@
 
 </div>
 
+<script src="../assets/js/gallery.js"></script>
+
 <script>
 
 const galleryNames = {
@@ -216,9 +218,39 @@ const params =
     new URLSearchParams(
         window.location.search
     );
+    
 
 const gallery =
     params.get("gallery");
+
+const data =
+    galleryData[gallery];
+
+if(data){
+
+    document.title =
+        data.name;
+
+    document.getElementById(
+        "galleryTitle"
+    ).textContent =
+        data.name;
+
+    document.getElementById(
+        "galleryCollection"
+    ).textContent =
+        data.collection;
+
+    document.getElementById(
+        "galleryStory"
+    ).textContent =
+        data.story;
+
+    document.getElementById(
+        "hero"
+    ).style.backgroundImage =
+        `url('${data.hero}')`;
+}
 
 document.title =
     galleryNames[gallery] ||

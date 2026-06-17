@@ -182,5 +182,21 @@
     "park": "rocky-mountain",
     "location": "ROCKY MOUNTAIN NATIONAL PARK",
     "image": "../assets/images/national-parks/rocky-mountain/rocky-mountain-sunriose-reflection.jpg"
+  },
+  {
+    "id": "olympic-rainforest",
+    "title": "GREEN ARCH",
+    "gallery": "national-parks",
+    "park": "olympic-rainforest",
+    "location": "OLYMPIC NATIONAL PARK",
+    "image": "../assets/images/national-parks/olympic/olympic-rainforest.jpg"
+  },
+  {
+    "id": "rainier-calm-sunrise-waterfall",
+    "title": "MOUNTAIN AND WATER",
+    "gallery": "national-parks",
+    "park": "rainier",
+    "location": "MOUNT RAINIER NATIONAL PARK",
+    "image": "../assets/images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg"
   }
 ]

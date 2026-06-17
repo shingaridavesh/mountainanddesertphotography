@@ -309,7 +309,6 @@
 
     .cg-mountains{
         background-image:
-            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
             url('../images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg');
         background-size:cover;
         background-position:center;
@@ -324,7 +323,6 @@
 
     .cg-forest{
         background-image:
-            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
             url('../images/national-parks/redwood/redwoods-fern-canyon.jpg');
         background-size:cover;
         background-position:center;
@@ -339,7 +337,6 @@
 
     .cg-waterfalls{
         background-image:
-            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
             url('../images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg');
         background-size:cover;
         background-position:center;

@@ -98,9 +98,9 @@
     max-width:1500px;
     margin:auto;
     padding:0 3rem 8rem;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:6rem;
+
+    columns:2;
+    column-gap:4rem;
 }
 
 .intro{
@@ -127,6 +127,8 @@
 
 .photo{
     overflow:hidden;
+    break-inside:avoid;
+    margin-bottom:4rem;
 }
 
 .photo img{
@@ -250,6 +252,14 @@
     letter-spacing:.25em;
     font-size:.8rem;
     opacity:.8;
+}
+
+@media (max-width: 900px){
+
+    .gallery{
+        columns:1;
+    }
+
 }
 
 </style>

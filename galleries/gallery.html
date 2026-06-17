@@ -29,6 +29,7 @@
 .gallery-card{
     text-decoration:none;
     color:inherit;
+    cursor:pointer;
 }
 
 .gallery-card img{
@@ -36,6 +37,11 @@
     aspect-ratio:4/5;
     object-fit:cover;
     display:block;
+    transition:transform .3s ease;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.02);
 }
 
 .gallery-card h3{
@@ -43,6 +49,81 @@
     text-align:center;
     font-size:.9rem;
     letter-spacing:.08em;
+}
+
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.95);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:80vw;
+    max-height:80vh;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:30px;
+    right:40px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    color:white;
+    font-size:4rem;
+    cursor:pointer;
+    z-index:10000;
+}
+
+.lightbox-prev{
+    left:30px;
+}
+
+.lightbox-next{
+    right:30px;
+}
+
+.lightbox-info{
+    position:absolute;
+    bottom:35px;
+    left:0;
+    right:0;
+    text-align:center;
+}
+
+#lightbox-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:300;
+    color:#f5f3ef;
+    margin:0;
+}
+
+.lightbox-counter{
+    position:absolute;
+    top:30px;
+    right:90px;
+    color:#c8a96b;
+    letter-spacing:.25em;
+    font-size:.8rem;
+    opacity:.8;
 }
 
 </style>
@@ -66,6 +147,30 @@
 <div
     id="galleryGrid"
     class="gallery-grid">
+</div>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox" class="lightbox">
+
+    <span class="lightbox-close">&times;</span>
+
+    <button class="lightbox-prev">&#10094;</button>
+
+    <img id="lightbox-img">
+
+    <button class="lightbox-next">&#10095;</button>
+
+    <div class="lightbox-info">
+
+        <h3 id="lightbox-title"></h3>
+
+        <div class="lightbox-counter">
+            <span id="lightbox-count"></span>
+        </div>
+
+    </div>
+
 </div>
 
 <script>
@@ -121,16 +226,67 @@ fetch("../data/photos.json")
                 )
         );
 
+    let currentIndex = 0;
+
     const grid =
         document.getElementById(
             "galleryGrid"
         );
 
+    const lightbox =
+        document.getElementById(
+            "lightbox"
+        );
+
+    const lightboxImg =
+        document.getElementById(
+            "lightbox-img"
+        );
+
+    const lightboxTitle =
+        document.getElementById(
+            "lightbox-title"
+        );
+
+    const lightboxCount =
+        document.getElementById(
+            "lightbox-count"
+        );
+
+    function showImage(index){
+
+        if(index < 0)
+            index =
+                matchingPhotos.length - 1;
+
+        if(index >= matchingPhotos.length)
+            index = 0;
+
+        currentIndex = index;
+
+        const photo =
+            matchingPhotos[index];
+
+        lightboxImg.src =
+            photo.image;
+
+        lightboxTitle.textContent =
+            photo.title;
+
+        lightboxCount.textContent =
+            `${index + 1} / ${matchingPhotos.length}`;
+
+        lightbox.style.display =
+            "flex";
+    }
+
     matchingPhotos.forEach(
-        photo => {
+        (photo,index) => {
 
         const card =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
 
         card.className =
             "gallery-card";
@@ -147,9 +303,51 @@ fetch("../data/photos.json")
             </h3>
         `;
 
+        card.addEventListener(
+            "click",
+            () => showImage(index)
+        );
+
         grid.appendChild(card);
 
     });
+
+    document.querySelector(
+        ".lightbox-close"
+    ).onclick = () =>
+        lightbox.style.display =
+            "none";
+
+    document.querySelector(
+        ".lightbox-prev"
+    ).onclick = () =>
+        showImage(currentIndex - 1);
+
+    document.querySelector(
+        ".lightbox-next"
+    ).onclick = () =>
+        showImage(currentIndex + 1);
+
+    document.addEventListener(
+        "keydown",
+        e => {
+
+            if(
+                lightbox.style.display !==
+                "flex"
+            ) return;
+
+            if(e.key === "ArrowRight")
+                showImage(currentIndex + 1);
+
+            if(e.key === "ArrowLeft")
+                showImage(currentIndex - 1);
+
+            if(e.key === "Escape")
+                lightbox.style.display =
+                    "none";
+        }
+    );
 
 });
 

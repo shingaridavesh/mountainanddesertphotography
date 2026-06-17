@@ -238,5 +238,13 @@
     "park": "saguaro",
     "location": "SAGUARO NATIONAL PARK",
     "image": "../assets/images/national-parks/saguaro/saguaro-fields.jpg"
+  },
+  {
+    "id": "great-basin-old-giant",
+    "title": "OLD GIANT",
+    "gallery": "national-parks",
+    "park": "great-basin",
+    "location": "GREAT BASIN NATIONAL PARK",
+    "image": "../assets/images/national-parks/great-basin/great-basin-old-giant.jpg"
   }
 ]

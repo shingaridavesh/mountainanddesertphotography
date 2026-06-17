@@ -273,6 +273,38 @@ const parkData = {
 
         hero:
             "../assets/images/national-parks/lassen-volcanic/lassen-colorful-rolling-hills.jpg"
+    },
+
+    "great-basin": {
+        name: "Great Basin",
+        subtitle: "National Park",
+
+        collectionTitle: "Beneath Ancient Skies",
+
+        collection:
+            "A collection featuring rugged mountain peaks, ancient bristlecone pines, alpine lakes, and vast desert landscapes that reveal the quiet beauty of Nevada's high country.",
+
+        story:
+            "Great Basin National Park protects a landscape of remarkable contrasts, where some of the world's oldest living trees stand beneath some of the darkest night skies in North America. Created among alpine summits, hidden groves, and expansive desert vistas, these photographs celebrate the solitude, resilience, and timeless character of this often-overlooked wilderness.",
+
+        hero:
+            "../assets/images/national-parks/great-basin/great-basin-old-giant.jpg"
+    },
+
+    "sequoia-kings-canyon": {
+        name: "Sequoia & Kings Canyon",
+        subtitle: "National Parks",
+
+        collectionTitle: "Among Giants",
+
+        collection:
+            "A collection featuring towering giant sequoias, deep glacial canyons, alpine peaks, and dramatic Sierra Nevada landscapes that showcase the scale and beauty of California's mountain wilderness.",
+
+        story:
+            "Sequoia and Kings Canyon National Parks protect some of the most extraordinary landscapes in the Sierra Nevada, from the world's largest trees to rugged alpine terrain carved by glaciers. Created among ancient groves, high mountain vistas, and winding canyon roads, these photographs celebrate the grandeur, resilience, and timeless beauty of these remarkable parks.",
+
+        hero:
+            "../assets/images/national-parks/sequoia-kings-canyon/sequoia-moro-rock-sunrise.jpg"
     }
 
 };

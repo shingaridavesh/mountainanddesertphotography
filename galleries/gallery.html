@@ -11,6 +11,168 @@
 
 <style>
 
+    body{
+    margin:0;
+    background:#080808;
+    color:#f5f3ef;
+    font-family:Georgia, serif;
+}
+
+.hero{
+    min-height:92vh;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.35);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:1200px;
+    margin:0 auto;
+    padding:140px 40px 100px;
+}
+
+.hero-eyebrow{
+    color:#c8a96b;
+    letter-spacing:.35em;
+    text-transform:uppercase;
+    margin-top:80px;
+    font-size:.7rem;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(4rem,8vw,7rem);
+    font-weight:300;
+    line-height:.95;
+    margin:.5rem 0;
+}
+
+.park-subtitle{
+    display:block;
+    font-size:.45em;
+    font-weight:300;
+    margin-top:.2rem;
+}
+
+.hero p{
+    max-width:650px;
+    color:#ece6dc;
+    line-height:1.9;
+}
+
+.hero h1{
+    font-size:4rem;
+    letter-spacing:.15em;
+    margin:0;
+}
+
+.hero p{
+    letter-spacing:.3em;
+    color:#c7b178;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:80px 40px;
+}
+
+.description{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.9;
+    font-size:1.1rem;
+}
+
+.gallery{
+    max-width:1500px;
+    margin:auto;
+    padding:0 3rem 8rem;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:6rem;
+}
+
+.intro{
+    padding:6rem 2rem 2rem;
+}
+
+.intro-inner{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-weight:300;
+    color:#ece6dc;
+    line-height:1.7;
+}
+
+.divider{
+    width:120px;
+    height:1px;
+    background:rgba(200,169,107,.4);
+    margin:4rem auto;
+}
+
+.photo{
+    overflow:hidden;
+}
+
+.photo img{
+    width:100%;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+.caption{
+    text-align:center;
+    padding-top:1.5rem;
+}
+
+.caption h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.7rem;
+    font-weight:300;
+    margin:0;
+}
+
+.caption p{
+    color:#a29a8c;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    font-size:.7rem;
+    margin-top:.75rem;
+}
+
+.back-link{
+    text-align:center;
+    padding:50px;
+}
+
+.back-link a{
+    color:#c7b178;
+    text-decoration:none;
+    letter-spacing:.15em;
+}
+
+
+
+
 .gallery-header{
     text-align:center;
     padding:5rem 2rem 3rem;

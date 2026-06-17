@@ -151,7 +151,6 @@
     "location": "BRYCE CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/bryce-canyon/bryce-winter-fire.jpg"
   },
-  ,
   {
     "id": "bryce-painted-amphitheater",
     "title": "PAINTED AMPHITHEATER",
@@ -160,7 +159,6 @@
     "location": "BRYCE CANYON NATIONAL PARK",
     "image": "../assets/images/national-parks/bryce-canyon/bryce-painted-amphitheater.jpg"
   },
-  ,
   {
     "id": "bryce-light-through-storm",
     "title": "LIGHT THROUGH STORM",

@@ -307,13 +307,45 @@
 
     .coll-item:hover .coll-bg { transform: scale(1.06); }
 
-    /* Placeholder gradients */
-    .cg-mountains  { background: linear-gradient(160deg, #0d1822 0%, #182818 40%, #1e1408 100%); }
-    .cg-southwest  { background: linear-gradient(150deg, #1e1008 0%, #2a1800 50%, #100808 100%); }
-    .cg-forest     { background: linear-gradient(170deg, #081208 0%, #0e2008 50%, #081510 100%); }
-    .cg-coastal    { background: linear-gradient(155deg, #080e1a 0%, #0d1828 50%, #100e08 100%); }
-    .cg-desert     { background: linear-gradient(145deg, #1a0e05 0%, #281500 50%, #0e0808 100%); }
-    .cg-alpine     { background: linear-gradient(165deg, #0a1220 0%, #182010 40%, #181008 100%); }
+    .cg-mountains{
+        background-image:
+            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
+            url('../images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+
+    .cg-southwest{
+        background-image:
+            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
+            url('../images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+
+    .cg-forest{
+        background-image:
+            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
+            url('../images/national-parks/redwood/redwoods-fern-canyon.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+
+    .cg-desert{
+        background-image:
+            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
+            url('../images/national-parks/saguaro/saguaro-fields.jpg');
+        background-size:cover;
+        background-position:center;
+    }
+
+    .cg-waterfalls{
+        background-image:
+            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
+            url('../images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg');
+        background-size:cover;
+        background-position:center;
+    }
 
     .coll-overlay {
       position: absolute;

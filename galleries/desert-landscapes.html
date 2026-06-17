@@ -30,7 +30,7 @@ fetch('../data/photos.json')
 .then(photos => {
 
     const photosToShow = photos.filter(
-        photo => photo.tags?.includes('forest')
+        photo => photo.tags?.includes('desert')
     );
 
     const gallery = document.getElementById('galleryGrid');

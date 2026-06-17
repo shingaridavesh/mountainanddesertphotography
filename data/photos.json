@@ -5,7 +5,14 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosemite-tunnel-view-day-storm.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosemite-tunnel-view-day-storm.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "storm"
+    ],
+    "featured": false,
+    "alt": "Storm Passing Over Tunnel View in Yosemite National Park, California"
   },
   {
     "id": "yosemite-half-dome-sunset-pink-light",
@@ -13,7 +20,14 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-sunset-pink-light.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-sunset-pink-light.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Sunset Pink Hue Over Half Dome in Yosemite National Park, California"
   },
   {
     "id": "yosemite-half-some-zoom-sunset",
@@ -21,7 +35,14 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosemite-half-some-zoom-sunset.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-some-zoom-sunset.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Pink Half Dome in Yosemite National Park, California"
   },
   {
     "id": "yosmite-el-capitan-storm",
@@ -29,7 +50,14 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosmite-el-capitan-storm.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosmite-el-capitan-storm.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "storm"
+    ],
+    "featured": false,
+    "alt": "El Capitan Standing Tall in Yosemite National Park, California"
   },
   {
     "id": "yosmite-fall-faraway",
@@ -37,7 +65,15 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosmite-fall-faraway.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosmite-fall-faraway.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "waterfalls",
+      "winter"
+    ],
+    "featured": false,
+    "alt": "Yosemite Fall Winter Rush in Yosemite National Park, California"
   },
   {
     "id": "yosemite-half-dome-fall",
@@ -45,7 +81,15 @@
     "gallery": "national-parks",
     "park": "yosemite",
     "location": "YOSEMITE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg"
+    "image": "../assets/images/national-parks/yosemite/yosemite-half-dome-fall-color.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "reflection",
+      "waterfalls"
+    ],
+    "featured": true,
+    "alt": "Fall Color Reflections Over Half Dome in Yosemite National Park, California"
   },
   {
     "id": "grand-canyon-storm-rainbow",
@@ -53,7 +97,15 @@
     "gallery": "national-parks",
     "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg"
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "storm"
+    ],
+    "featured": true,
+    "alt": "Grand Canyon Monsoon Storm Rainbow in Grand Canyon National Park, Arizona"
   },
   {
     "id": "grand-canyon-sunrise-storm",
@@ -61,7 +113,16 @@
     "gallery": "national-parks",
     "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-sunrise-storm.jpg"
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-sunrise-storm.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "storm",
+      "sunrise"
+    ],
+    "featured": false,
+    "alt": "Storm Brewing Over Grand Canyon in Grand Canyon National Park, Arizona"
   },
   {
     "id": "grand-canyon-moran-point",
@@ -69,71 +130,129 @@
     "gallery": "national-parks",
     "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg"
-  } ,
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunrise"
+    ],
+    "featured": true,
+    "alt": "Beautiful Sunrise At Moran Point in Grand Canyon National Park, Arizona"
+  },
   {
     "id": "grand-canyon-point-imperial-sunrise",
     "title": "CALM SUNRISE AT POINT IMPERIAL",
     "gallery": "national-parks",
     "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-point-imperial-sunrise.jpg"
-  } ,
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-point-imperial-sunrise.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunrise"
+    ],
+    "featured": false,
+    "alt": "Calm Sunrise At Point Imperial in Grand Canyon National Park, Arizona"
+  },
   {
     "id": "north-cascade-backpacking",
     "title": "NORTH CASCADE",
     "gallery": "national-parks",
     "park": "north-cascades",
     "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/north-cascades/north-cascade-backpacking.jpg"
-  } ,
+    "image": "../assets/images/national-parks/north-cascades/north-cascade-backpacking.jpg",
+    "state": "Washington",
+    "tags": [
+      "mountains"
+    ],
+    "featured": false,
+    "alt": "North Cascade in North Cascade National Park, Washington"
+  },
   {
     "id": "north-cascade-photographer",
     "title": "NORTH CASCADE GRANDEUR",
     "gallery": "national-parks",
     "park": "north-cascades",
     "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/north-cascades/north-cascade-photographer.jpg"
-  } ,
+    "image": "../assets/images/national-parks/north-cascades/north-cascade-photographer.jpg",
+    "state": "Washington",
+    "tags": [
+      "mountains"
+    ],
+    "featured": false,
+    "alt": "North Cascade Grandeur in North Cascade National Park, Washington"
+  },
   {
     "id": "redwood-forest-trail",
     "title": "WALK AMONG GIANTS",
     "gallery": "national-parks",
     "park": "redwood",
-    "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/redwood/redwood-forest-trail.jpg"
-  } ,
+    "location": "REDWOOD NATIONAL AND STATE PARKS",
+    "image": "../assets/images/national-parks/redwood/redwood-forest-trail.jpg",
+    "state": "California",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Walk Among Giants in Redwood National And State Parks, California"
+  },
   {
     "id": "redwoods-sign-big-trees",
     "title": "BIG TREES",
     "gallery": "national-parks",
     "park": "redwood",
-    "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/redwood/redwoods-sign-big-trees.jpg"
-  } ,
+    "location": "REDWOOD NATIONAL AND STATE PARKS",
+    "image": "../assets/images/national-parks/redwood/redwoods-sign-big-trees.jpg",
+    "state": "California",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Big Trees in Redwood National And State Parks, California"
+  },
   {
     "id": "redwood-dense-forest",
     "title": "WHERE LIGHT FINDS THE FOREST",
     "gallery": "national-parks",
     "park": "redwood",
-    "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/redwood/redwood-dense-forest.jpg"
-  } ,
+    "location": "REDWOOD NATIONAL AND STATE PARKS",
+    "image": "../assets/images/national-parks/redwood/redwood-dense-forest.jpg",
+    "state": "California",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Where Light Finds The Forest in Redwood National And State Parks, California"
+  },
   {
     "id": "redwoods_green_tapestry",
     "title": "GREEN TAPESTRY",
     "gallery": "national-parks",
     "park": "redwood",
-    "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/redwood/redwoods_green_tapestry.jpg"
-  } ,
+    "location": "REDWOOD NATIONAL AND STATE PARKS",
+    "image": "../assets/images/national-parks/redwood/redwoods_green_tapestry.jpg",
+    "state": "California",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Green Tapestry in Redwood National And State Parks, California"
+  },
   {
     "id": "redwoods-fern-canyon",
     "title": "FERN CANYON",
     "gallery": "national-parks",
     "park": "redwood",
-    "location": "NORTH CASCADE NATIONAL PARK",
-    "image": "../assets/images/national-parks/redwood/redwoods-fern-canyon.jpg"
+    "location": "REDWOOD NATIONAL AND STATE PARKS",
+    "image": "../assets/images/national-parks/redwood/redwoods-fern-canyon.jpg",
+    "state": "California",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Fern Canyon in Redwood National And State Parks, California"
   },
   {
     "id": "bryce-sunset-snow",
@@ -141,7 +260,16 @@
     "gallery": "national-parks",
     "park": "bryce-canyon",
     "location": "BRYCE CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/bryce-canyon/bryce-sunset-snow.jpg"
+    "image": "../assets/images/national-parks/bryce-canyon/bryce-sunset-snow.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunset",
+      "winter"
+    ],
+    "featured": true,
+    "alt": "Snow And Fire in Bryce Canyon National Park, Utah"
   },
   {
     "id": "bryce-winter-fire",
@@ -149,7 +277,15 @@
     "gallery": "national-parks",
     "park": "bryce-canyon",
     "location": "BRYCE CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/bryce-canyon/bryce-winter-fire.jpg"
+    "image": "../assets/images/national-parks/bryce-canyon/bryce-winter-fire.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest",
+      "winter"
+    ],
+    "featured": false,
+    "alt": "  Winter Fire in Bryce Canyon National Park, Utah"
   },
   {
     "id": "bryce-painted-amphitheater",
@@ -157,7 +293,14 @@
     "gallery": "national-parks",
     "park": "bryce-canyon",
     "location": "BRYCE CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/bryce-canyon/bryce-painted-amphitheater.jpg"
+    "image": "../assets/images/national-parks/bryce-canyon/bryce-painted-amphitheater.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Painted Amphitheater in Bryce Canyon National Park, Utah"
   },
   {
     "id": "bryce-light-through-storm",
@@ -165,7 +308,15 @@
     "gallery": "national-parks",
     "park": "bryce-canyon",
     "location": "BRYCE CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/bryce-canyon/bryce-light-through-storm.jpg"
+    "image": "../assets/images/national-parks/bryce-canyon/bryce-light-through-storm.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest",
+      "storm"
+    ],
+    "featured": false,
+    "alt": "Light Through Storm in Bryce Canyon National Park, Utah"
   },
   {
     "id": "canyonland-moody-sunset",
@@ -173,7 +324,15 @@
     "gallery": "national-parks",
     "park": "canyonlands",
     "location": "CANYONLAND NATIONAL PARK",
-    "image": "../assets/images/national-parks/canyonlands/canyonland-moody-sunset.jpg"
+    "image": "../assets/images/national-parks/canyonlands/canyonland-moody-sunset.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Canyon Serenity in Canyonland National Park, Utah"
   },
   {
     "id": "glacier-sunrise-reflection",
@@ -181,7 +340,15 @@
     "gallery": "national-parks",
     "park": "glacier",
     "location": "GLACIER NATIONAL PARK",
-    "image": "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg"
+    "image": "../assets/images/national-parks/glacier/glacier-sunrise-reflection.jpg",
+    "state": "Montana",
+    "tags": [
+      "mountains",
+      "reflection",
+      "sunrise"
+    ],
+    "featured": true,
+    "alt": "Reflection in Glacier National Park, Montana"
   },
   {
     "id": "teton-barn-beautiful-sunrise",
@@ -189,7 +356,14 @@
     "gallery": "national-parks",
     "park": "grand-teton",
     "location": "GRAND TETON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg"
+    "image": "../assets/images/national-parks/grand-teton/teton-barn-beautiful-sunrise.jpg",
+    "state": "Wyoming",
+    "tags": [
+      "mountains",
+      "sunrise"
+    ],
+    "featured": false,
+    "alt": "Barn in Grand Teton National Park, Wyoming"
   },
   {
     "id": "yellowstone-grand-prismatic",
@@ -197,7 +371,14 @@
     "gallery": "national-parks",
     "park": "yellowstone",
     "location": "YELLOWSTONE NATIONAL PARK",
-    "image": "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic.jpg"
+    "image": "../assets/images/national-parks/yellowstone/yellowstone-grand-prismatic.jpg",
+    "state": "Wyoming",
+    "tags": [
+      "geothermal",
+      "mountains"
+    ],
+    "featured": false,
+    "alt": "Nature Colors in Yellowstone National Park, Wyoming"
   },
   {
     "id": "rocky-mountain-sunriose-reflection",
@@ -205,7 +386,14 @@
     "gallery": "national-parks",
     "park": "rocky-mountain",
     "location": "ROCKY MOUNTAIN NATIONAL PARK",
-    "image": "../assets/images/national-parks/rocky-mountain/rocky-mountain-sunriose-reflection.jpg"
+    "image": "../assets/images/national-parks/rocky-mountain/rocky-mountain-sunriose-reflection.jpg",
+    "state": "Colorado",
+    "tags": [
+      "mountains",
+      "reflection"
+    ],
+    "featured": false,
+    "alt": "Reflction in Rocky Mountain National Park, Colorado"
   },
   {
     "id": "olympic-rainforest",
@@ -213,7 +401,13 @@
     "gallery": "national-parks",
     "park": "olympic",
     "location": "OLYMPIC NATIONAL PARK",
-    "image": "../assets/images/national-parks/olympic/olympic-rainforest.jpg"
+    "image": "../assets/images/national-parks/olympic/olympic-rainforest.jpg",
+    "state": "Washington",
+    "tags": [
+      "forest"
+    ],
+    "featured": false,
+    "alt": "Green Arch in Olympic National Park, Washington"
   },
   {
     "id": "rainier-calm-sunrise-waterfall",
@@ -221,7 +415,15 @@
     "gallery": "national-parks",
     "park": "rainier",
     "location": "MOUNT RAINIER NATIONAL PARK",
-    "image": "../assets/images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg"
+    "image": "../assets/images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg",
+    "state": "Washington",
+    "tags": [
+      "mountains",
+      "sunrise",
+      "waterfalls"
+    ],
+    "featured": false,
+    "alt": "Mountain And Water in Mount Rainier National Park, Washington"
   },
   {
     "id": "joshua-tree-horizontal-rocks",
@@ -229,7 +431,14 @@
     "gallery": "national-parks",
     "park": "joshua-tree",
     "location": "JOSHUA TREE NATIONAL PARK",
-    "image": "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"
+    "image": "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg",
+    "state": "California",
+    "tags": [
+      "desert",
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Tetris in Joshua Tree National Park, California"
   },
   {
     "id": "arches-wide",
@@ -237,7 +446,14 @@
     "gallery": "national-parks",
     "park": "arches",
     "location": "ARCHES NATIONAL PARK",
-    "image": "../assets/images/national-parks/arches/arches-wide.jpg"
+    "image": "../assets/images/national-parks/arches/arches-wide.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Arch And Sky in Arches National Park, Utah"
   },
   {
     "id": "petrified-wood-storm-sunsete",
@@ -245,7 +461,16 @@
     "gallery": "national-parks",
     "park": "petrified-forest",
     "location": "PETRIFIED FOREST NATIONAL PARK",
-    "image": "../assets/images/national-parks/petrified-forest/petrified-wood-storm-sunset.jpg"
+    "image": "../assets/images/national-parks/petrified-forest/petrified-wood-storm-sunset.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "storm",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Wood Color in Petrified Forest National Park, Arizona"
   },
   {
     "id": "lassen-colorful-rolling-hills",
@@ -253,7 +478,14 @@
     "gallery": "national-parks",
     "park": "lassen-volcanic",
     "location": "LASSEN VOLCANIC NATIONAL PARK",
-    "image": "../assets/images/national-parks/lassen-volcanic/lassen-colorful-rolling-hills.jpg"
+    "image": "../assets/images/national-parks/lassen-volcanic/lassen-colorful-rolling-hills.jpg",
+    "state": "California",
+    "tags": [
+      "mountains",
+      "volcanic"
+    ],
+    "featured": false,
+    "alt": "Earthy Colors in Lassen Volcanic National Park, California"
   },
   {
     "id": "saguaro-fields",
@@ -261,7 +493,14 @@
     "gallery": "national-parks",
     "park": "saguaro",
     "location": "SAGUARO NATIONAL PARK",
-    "image": "../assets/images/national-parks/saguaro/saguaro-fields.jpg"
+    "image": "../assets/images/national-parks/saguaro/saguaro-fields.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Rolling Saguaro in Saguaro National Park, Arizona"
   },
   {
     "id": "great-basin-old-giant",
@@ -269,7 +508,13 @@
     "gallery": "national-parks",
     "park": "great-basin",
     "location": "GREAT BASIN NATIONAL PARK",
-    "image": "../assets/images/national-parks/great-basin/great-basin-old-giant.jpg"
+    "image": "../assets/images/national-parks/great-basin/great-basin-old-giant.jpg",
+    "state": "Nevada",
+    "tags": [
+      "mountains"
+    ],
+    "featured": false,
+    "alt": "Old Giant in Great Basin National Park, Nevada"
   },
   {
     "id": "zion-angels-landing",
@@ -277,6 +522,14 @@
     "gallery": "national-parks",
     "park": "zion",
     "location": "ZION NATIONAL PARK",
-    "image": "../assets/images/national-parks/zion/zion-angels-landing.jpg"
+    "image": "../assets/images/national-parks/zion/zion-angels-landing.jpg",
+    "state": "Utah",
+    "tags": [
+      "desert",
+      "mountains",
+      "southwest"
+    ],
+    "featured": true,
+    "alt": "Angels Landing in Zion National Park, Utah"
   }
 ]

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery</title>
+
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<style>
+
+.gallery-header{
+    text-align:center;
+    padding:5rem 2rem 3rem;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+    gap:2rem;
+    padding:0 2rem 4rem;
+    max-width:1400px;
+    margin:auto;
+}
+
+.gallery-card{
+    text-decoration:none;
+    color:inherit;
+}
+
+.gallery-card img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-card h3{
+    margin:.8rem 0 0;
+    text-align:center;
+    font-size:.9rem;
+    letter-spacing:.08em;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="site-nav">
+    <a href="../index.html">Home</a>
+</nav>
+
+<section class="gallery-header">
+
+    <h1 id="galleryTitle">
+        Gallery
+    </h1>
+
+</section>
+
+<div
+    id="galleryGrid"
+    class="gallery-grid">
+</div>
+
+<script>
+
+const galleryNames = {
+
+    forest:
+        "Ancient Forests",
+
+    mountains:
+        "Mountain Landscapes",
+
+    desert:
+        "Desert Landscapes",
+
+    southwest:
+        "American Southwest",
+
+    waterfalls:
+        "Waterfalls"
+
+};
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+const gallery =
+    params.get("gallery");
+
+document.title =
+    galleryNames[gallery] ||
+    "Gallery";
+
+document.getElementById(
+    "galleryTitle"
+).textContent =
+    galleryNames[gallery] ||
+    "Gallery";
+
+fetch("../data/photos.json")
+
+.then(r => r.json())
+
+.then(photos => {
+
+    const matchingPhotos =
+        photos.filter(
+            photo =>
+                photo.tags?.includes(
+                    gallery
+                )
+        );
+
+    const grid =
+        document.getElementById(
+            "galleryGrid"
+        );
+
+    matchingPhotos.forEach(
+        photo => {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "gallery-card";
+
+        card.innerHTML = `
+            <img
+                src="${photo.image}"
+                alt="${photo.alt}"
+                loading="lazy"
+            >
+
+            <h3>
+                ${photo.title}
+            </h3>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

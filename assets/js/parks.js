@@ -305,6 +305,86 @@ const parkData = {
 
         hero:
             "../assets/images/national-parks/sequoia-kings-canyon/sequoia-moro-rock-sunrise.jpg"
+    },
+
+    "zion": {
+        name: "Zion",
+        subtitle: "National Park",
+
+        collectionTitle: "Walls of Stone",
+
+        collection:
+            "A collection featuring towering sandstone cliffs, narrow canyons, winding rivers, and dramatic desert landscapes that define the beauty of Utah's canyon country.",
+
+        story:
+            "Zion National Park protects a landscape of immense cliffs, sculpted canyons, and vibrant desert ecosystems shaped over millions of years. Created among soaring canyon walls, quiet riverbanks, and high overlooks, these photographs celebrate the scale, color, and enduring spirit of one of the Southwest's most iconic landscapes.",
+
+        hero:
+            "../assets/images/national-parks/zion/zion-angels-landing.jpg"
+    },
+
+    "channel-islands": {
+        name: "Channel Islands",
+        subtitle: "National Park",
+
+        collectionTitle: "Islands of the Pacific",
+
+        collection:
+            "A collection featuring rugged sea cliffs, windswept landscapes, coastal wildlife, and pristine island scenery preserved along California's remote coastline.",
+
+        story:
+            "Channel Islands National Park protects five remarkable islands where isolation has shaped unique ecosystems and dramatic coastal landscapes. Created among sea caves, ocean vistas, and wild island terrain, these photographs celebrate the beauty, diversity, and untamed character of North America's Galápagos.",
+
+        hero:
+            "../assets/images/national-parks/channel-islands/channel-islands-coastline.jpg"
+    },
+
+    "white-sands": {
+        name: "White Sands",
+        subtitle: "National Park",
+
+        collectionTitle: "Sea of White",
+
+        collection:
+            "A collection featuring endless gypsum dunes, sculpted sand formations, and changing desert light across one of the world's most extraordinary landscapes.",
+
+        story:
+            "White Sands National Park protects the largest gypsum dune field on Earth, where wind and light continually reshape a landscape unlike any other. Created during sunrise, sunset, and quiet desert evenings, these photographs celebrate the simplicity, elegance, and ever-changing beauty of New Mexico's white desert.",
+
+        hero:
+            "../assets/images/national-parks/white-sands/white-sands-dunes-sunset.jpg"
+    },
+
+    "pinnacles": {
+        name: "Pinnacles",
+        subtitle: "National Park",
+
+        collectionTitle: "Spires of Stone",
+
+        collection:
+            "A collection featuring dramatic rock formations, volcanic spires, hidden caves, and rugged landscapes shaped by ancient volcanic activity.",
+
+        story:
+            "Pinnacles National Park preserves a landscape of towering rock formations and unique geological features created by an ancient volcanic field. Created among winding trails, rugged peaks, and golden California hills, these photographs celebrate the textures, forms, and wild beauty of one of the state's most distinctive parks.",
+
+        hero:
+            "../assets/images/national-parks/pinnacles/pinnacles-rock-spires.jpg"
+    },
+
+    "death-valley": {
+        name: "Death Valley",
+        subtitle: "National Park",
+
+        collectionTitle: "Land of Extremes",
+
+        collection:
+            "A collection featuring vast salt flats, colorful badlands, towering sand dunes, and rugged desert mountains across North America's hottest and driest national park.",
+
+        story:
+            "Death Valley National Park protects a landscape of extraordinary contrasts, where below-sea-level basins, sculpted canyons, and distant mountain ranges create scenes of remarkable scale and beauty. Created during fleeting desert light, stormy skies, and quiet moments of solitude, these photographs celebrate the resilience, drama, and timeless character of the desert.",
+
+        hero:
+            "../assets/images/national-parks/death-valley/death-valley-salt-flats-sunrise.jpg"
     }
 
 };

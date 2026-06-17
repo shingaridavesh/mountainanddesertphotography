@@ -246,5 +246,13 @@
     "park": "great-basin",
     "location": "GREAT BASIN NATIONAL PARK",
     "image": "../assets/images/national-parks/great-basin/great-basin-old-giant.jpg"
+  },
+  {
+    "id": "zion-angels-landing",
+    "title": "ANGELS LANDING",
+    "gallery": "national-parks",
+    "park": "zion",
+    "location": "ZION NATIONAL PARK",
+    "image": "../assets/images/national-parks/great-basin/zion-angels-landing.jpg"
   }
 ]

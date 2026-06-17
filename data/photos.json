@@ -203,7 +203,7 @@
     "id": "joshua-tree-horizontal-rocks",
     "title": "TETRIS",
     "gallery": "national-parks",
-    "park": "joshua",
+    "park": "joshua-tree",
     "location": "JOSHUA TREE NATIONAL PARK",
     "image": "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"
   },
@@ -214,5 +214,29 @@
     "park": "arches",
     "location": "ARCHES NATIONAL PARK",
     "image": "../assets/images/national-parks/arches/arches-wide.jpg"
+  },
+  {
+    "id": "petrified-wood-storm-sunsete",
+    "title": "WOOD COLOR",
+    "gallery": "national-parks",
+    "park": "petrified-forest",
+    "location": "PETRIFIED FOREST NATIONAL PARK",
+    "image": "../assets/images/national-parks/petrified-forest/petrified-wood-storm-sunset.jpg"
+  },
+  {
+    "id": "lassen-colorful-rolling-hills",
+    "title": "EARTHY COLORS",
+    "gallery": "national-parks",
+    "park": "lassen-volcanic",
+    "location": "LASSEN VOLCANIC NATIONAL PARK",
+    "image": "../assets/images/national-parks/lassen-volcanic/lassen-colorful-rolling-hills.jpg"
+  },
+  {
+    "id": "saguaro-fields",
+    "title": "ROLLING SAGUARO",
+    "gallery": "national-parks",
+    "park": "saguaro",
+    "location": "SAGUARO NATIONAL PARK",
+    "image": "../assets/images/national-parks/saguaro/saguaro-fields.jpg"
   }
 ]

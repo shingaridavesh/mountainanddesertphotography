@@ -317,7 +317,6 @@
 
     .cg-southwest{
         background-image:
-            linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.35)),
             url('../images/national-parks/grand-canyon/grand-canyon-storm-rainbow.jpg');
         background-size:cover;
         background-position:center;

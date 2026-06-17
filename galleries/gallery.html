@@ -178,42 +178,6 @@
     padding:5rem 2rem 3rem;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(320px,1fr));
-    gap:2rem;
-    padding:0 2rem 4rem;
-    max-width:1400px;
-    margin:auto;
-}
-
-.gallery-card{
-    text-decoration:none;
-    color:inherit;
-    cursor:pointer;
-}
-
-.gallery-card img{
-    width:100%;
-    aspect-ratio:4/5;
-    object-fit:cover;
-    display:block;
-    transition:transform .3s ease;
-}
-
-.gallery-card:hover img{
-    transform:scale(1.02);
-}
-
-.gallery-card h3{
-    margin:.8rem 0 0;
-    text-align:center;
-    font-size:.9rem;
-    letter-spacing:.08em;
-}
-
-
 /* LIGHTBOX */
 
 .lightbox{
@@ -326,8 +290,8 @@
 </section>
 
 <div
-    id="galleryGrid"
-    class="gallery-grid">
+    id="gallery"
+    class="gallery">
 </div>
 
 <!-- LIGHTBOX -->
@@ -415,16 +379,6 @@ if(data){
         `url('${data.hero}')`;
 }
 
-document.title =
-    galleryNames[gallery] ||
-    "Gallery";
-
-document.getElementById(
-    "galleryTitle"
-).textContent =
-    galleryNames[gallery] ||
-    "Gallery";
-
 fetch("../data/photos.json")
 
 .then(r => r.json())
@@ -441,9 +395,9 @@ fetch("../data/photos.json")
 
     let currentIndex = 0;
 
-    const grid =
+    const galleryContainer =
         document.getElementById(
-            "galleryGrid"
+            "gallery"
         );
 
     const lightbox =
@@ -496,34 +450,56 @@ fetch("../data/photos.json")
     matchingPhotos.forEach(
         (photo,index) => {
 
-        const card =
-            document.createElement(
-                "div"
-            );
+        galleryContainer.insertAdjacentHTML(
+            "beforeend",
+            `
+            <div class="photo">
 
-        card.className =
-            "gallery-card";
+                <img
+                    src="${photo.image}"
+                    alt="${photo.title}"
+                    loading="lazy"
+                    class="gallery-image">
 
-        card.innerHTML = `
-            <img
-                src="${photo.image}"
-                alt="${photo.alt}"
-                loading="lazy"
-            >
+                <div class="caption">
 
-            <h3>
-                ${photo.title}
-            </h3>
-        `;
+                    <h3>${photo.title}</h3>
 
-        card.addEventListener(
-            "click",
-            () => showImage(index)
+                    <p>${photo.location || ""}</p>
+
+                </div>
+
+            </div>
+            `
         );
 
-        grid.appendChild(card);
-
     });
+
+    document.addEventListener(
+        "click",
+        e => {
+
+            if(
+                e.target.classList.contains(
+                    "gallery-image"
+                )
+            ){
+
+                const images =
+                    [...document.querySelectorAll(
+                        ".gallery-image"
+                    )];
+
+                currentIndex =
+                    images.indexOf(
+                        e.target
+                    );
+
+                showImage(currentIndex);
+            }
+
+        }
+    );
 
     document.querySelector(
         ".lightbox-close"

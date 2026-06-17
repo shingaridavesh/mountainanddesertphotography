@@ -198,5 +198,21 @@
     "park": "rainier",
     "location": "MOUNT RAINIER NATIONAL PARK",
     "image": "../assets/images/national-parks/rainier/rainier-calm-sunrise-waterfall.jpg"
+  },
+  {
+    "id": "joshua-tree-horizontal-rocks",
+    "title": "TETRIS",
+    "gallery": "national-parks",
+    "park": "joshua",
+    "location": "JOSHUA TREE NATIONAL PARK",
+    "image": "../assets/images/national-parks/joshua/joshua-tree-horizontal-rocks.jpg"
+  },
+  {
+    "id": "arches-wide",
+    "title": "ARCH AND SKY",
+    "gallery": "national-parks",
+    "park": "arches",
+    "location": "ARCHES NATIONAL PARK",
+    "image": "../assets/images/national-parks/arches/arches-wide.jpg"
   }
 ]

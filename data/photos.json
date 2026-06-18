@@ -587,5 +587,33 @@
     ],
     "featured": true,
     "alt": "Bird eye view of Yosemite Valley"
+  },
+  {
+    "id": "yosemite-valley-top-view",
+    "title": "TODO",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosemite-valley-top-view.jpg",
+    "state": "California",
+    "tags": [
+      "mountains"
+    ],
+    "featured": true,
+    "alt": "Bird eye view of Yosemite Valley"
+  },
+  {
+    "id": "north-cascade-afternoon-storm",
+    "title": "TODO",
+    "gallery": "national-parks",
+    "park": "north-cascades",
+    "location": "NORTH CASCADE NATIONAL PARK",
+    "image": "../assets/images/national-parks/north-cascades/north-cascade-afternoon-storm.jpg",
+    "state": "Washington",
+    "tags": [
+      "mountains"
+    ],
+    "featured": false,
+    "alt": "Afternoon Storm passing through high peaks of North Cascades in North Cascade National Park, Washington"
   }
 ]

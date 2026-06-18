@@ -281,23 +281,64 @@
     #collections { padding: 7rem 0; background: var(--black); }
 
     .collections-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 4px;
+      display:grid;
+      gap:6px;
+
+      grid-template-columns: 1.7fr 1fr;
+
+      grid-template-areas:
+          "parks mountains"
+          "parks southwest"
+          "desert forests"
+          "waterfalls waterfalls";
     }
 
     .coll-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      aspect-ratio: 3/4;
-      background: var(--ink);
+      position:relative;
+      overflow:hidden;
+      cursor:pointer;
+      background:var(--ink);
     }
 
-    .coll-item.wide {
-      grid-column: span 2;
-      aspect-ratio: 16/9;
+    .parks{
+      grid-area:parks;
+      min-height:700px;
     }
+
+    .mountains{
+      grid-area:mountains;
+      min-height:347px;
+    }
+
+    .southwest{
+      grid-area:southwest;
+      min-height:347px;
+    }
+
+    .desert{
+      grid-area:desert;
+      min-height:320px;
+    }
+
+    .forests{
+      grid-area:forests;
+      min-height:320px;
+    }
+
+    .waterfalls{
+      grid-area:waterfalls;
+      min-height:280px;
+    }
+
+    .parks .coll-name{
+      font-size:2.8rem;
+    }
+
+    .parks .coll-count{
+      font-size:.95rem;
+      letter-spacing:2px;
+    }
+
 
     .coll-bg {
       width: 100%; height: 100%;
@@ -852,8 +893,25 @@
       .nav-left, .nav-right { display: none; }
       .nav-inner { grid-template-columns: 1fr; justify-items: center; }
 
-      .collections-grid { grid-template-columns: repeat(2, 1fr); }
-      .coll-item.wide { grid-column: span 2; }
+      .collections-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "parks"
+            "mountains"
+            "southwest"
+            "desert"
+            "forests"
+            "waterfalls";
+      }
+
+      .parks,
+      .mountains,
+      .southwest,
+      .desert,
+      .forests,
+      .waterfalls {
+          min-height: 320px;
+        }
 
       .artist-inner { grid-template-columns: 1fr; }
       .artist-img-wrap { max-width: 420px; margin-bottom: 3rem; }
@@ -868,8 +926,31 @@
       .section-wrap { padding: 0 1.2rem; }
       #collections, #featured, #formats, #artist, #contact { padding: 5rem 0; }
 
-      .collections-grid { grid-template-columns: 1fr 1fr; gap: 3px; }
-      .coll-item.wide { grid-column: span 2; }
+      .collections-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+
+        grid-template-areas:
+            "parks"
+            "mountains"
+            "southwest"
+            "desert"
+            "forests"
+            "waterfalls";
+    }
+
+      .parks,
+      .mountains,
+      .southwest,
+      .desert,
+      .forests,
+      .waterfalls {
+          min-height: 260px;
+      }
+
+    .parks .coll-name {
+        font-size: 2rem;
+    }
 
       .featured-grid { grid-template-columns: 1fr; }
       .formats-grid { grid-template-columns: 1fr; }

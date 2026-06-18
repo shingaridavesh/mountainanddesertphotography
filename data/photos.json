@@ -531,5 +531,33 @@
     ],
     "featured": true,
     "alt": "Angels Landing in Zion National Park, Utah"
+  },
+  {
+    "id": "dragon-scale",
+    "title": "DRAGON SCALE",
+    "gallery": "southwest",
+    "park": " ",
+    "location": "ARIZONA WILDERNESS",
+    "image": "../assets/images/national-parks/arizona/dragon-scale.jpg",
+    "state": "Arizona",
+    "tags": [
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Storm Brewing over remote wilderness in Arizona"
+  },
+  {
+    "id": "slot-canyon-fire-eye",
+    "title": "ANGELS LANDING",
+    "gallery": "southwest",
+    "park": " ",
+    "location": "SLOT CANYONS",
+    "image": "../assets/images/national-parks/arizona/slot-canyon-fire-eye.jpg",
+    "state": "Arizona",
+    "tags": [
+      "southwest"
+    ],
+    "featured": false,
+    "alt": "Light shining through a hole in remote Slot Canyon in Arizona"
   }
 ]

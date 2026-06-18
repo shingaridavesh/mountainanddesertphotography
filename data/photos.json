@@ -573,5 +573,19 @@
     ],
     "featured": true,
     "alt": "Red rocks breaking through snowy clouds after a winter storm in Sedona"
+  },
+  {
+    "id": "yosemite-valley-soft",
+    "title": "BIRD EYE VIEW",
+    "gallery": "national-parks",
+    "park": "yosemite",
+    "location": "YOSEMITE NATIONAL PARK",
+    "image": "../assets/images/national-parks/yosemite/yosemite-valley-soft.jpg",
+    "state": "California",
+    "tags": [
+      "mountains"
+    ],
+    "featured": true,
+    "alt": "Bird eye view of Yosemite Valley"
   }
 ]

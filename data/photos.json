@@ -548,7 +548,7 @@
   },
   {
     "id": "slot-canyon-fire-eye",
-    "title": "ANGELS LANDING",
+    "title": "FIRE EYE",
     "gallery": "southwest",
     "park": " ",
     "location": "SLOT CANYONS",
@@ -559,5 +559,19 @@
     ],
     "featured": false,
     "alt": "Light shining through a hole in remote Slot Canyon in Arizona"
+  },
+  {
+    "id": "sedona-red-snow",
+    "title": "SEDONA RED SNOW",
+    "gallery": "southwest",
+    "park": " ",
+    "location": "SEDONA",
+    "image": "../assets/images/national-parks/arizona/sedona-red-snow.jpg",
+    "state": "Arizona",
+    "tags": [
+      "southwest"
+    ],
+    "featured": true,
+    "alt": "Red rocks breaking through snowy clouds after a winter storm in Sedona"
   }
 ]

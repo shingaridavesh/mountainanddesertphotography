@@ -157,6 +157,22 @@
     "alt": "Calm Sunrise At Point Imperial in Grand Canyon National Park, Arizona"
   },
   {
+    "id": "grand-canyon-wotan-last-light",
+    "title": "WOTAN'S LAST LIGHT",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
+    "location": "GRAND CANYON NATIONAL PARK",
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-wotan-last-light.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Last Light hitting Wotan's throne at Grand Canyon National Park, Arizona"
+  },
+  {
     "id": "north-cascade-backpacking",
     "title": "NORTH CASCADE",
     "gallery": "national-parks",

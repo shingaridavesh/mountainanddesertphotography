@@ -173,6 +173,22 @@
     "alt": "Last Light hitting Wotan's throne at Grand Canyon National Park, Arizona"
   },
   {
+    "id": "grand-canyon-tmple-in-twilight",
+    "title": "TEMPLE IN TWILIGHT",
+    "gallery": "national-parks",
+    "park": "grand-canyon",
+    "location": "GRAND CANYON NATIONAL PARK",
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-tmple-in-twilight.jpg",
+    "state": "Arizona",
+    "tags": [
+      "desert",
+      "southwest",
+      "sunset"
+    ],
+    "featured": false,
+    "alt": "Last Light hitting Temple at Grand Canyon National Park, Arizona"
+  },
+  {
     "id": "north-cascade-backpacking",
     "title": "NORTH CASCADE",
     "gallery": "national-parks",

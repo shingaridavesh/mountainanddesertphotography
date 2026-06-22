@@ -130,21 +130,14 @@
       opacity: 0;
       transform: scale(1);
 
-      transition: opacity 2.5s ease-in-out;
+      transition:
+          opacity 2.5s ease-in-out,
+          transform 10s linear;
     }
 
     .hero-slide.active {
       opacity: 1;
-      animation: heroZoom 8s linear forwards;
-    }
-
-    @keyframes heroZoom {
-      from {
-          transform: scale(1);
-      }
-      to {
-          transform: scale(1.25);
-      }
+      transform: scale(1.08);
     }
 
     .hero-bg::after {

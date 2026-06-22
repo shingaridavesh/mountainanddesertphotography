@@ -47,14 +47,20 @@ if (slides.length > 0) {
 
     setInterval(() => {
 
-        slides[currentSlide]
-            .classList.remove("active");
+        const previous = currentSlide;
 
         currentSlide =
             (currentSlide + 1) % slides.length;
 
         slides[currentSlide]
             .classList.add("active");
+
+        setTimeout(() => {
+
+            slides[previous]
+                .classList.remove("active");
+
+        }, 2500);
 
     }, 8000);
 

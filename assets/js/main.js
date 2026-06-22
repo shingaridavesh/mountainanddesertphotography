@@ -39,20 +39,23 @@
       alert('Thank you — your inquiry has been sent. I\'ll be in touch shortly.');
     }
 
-const slides =
-  document.querySelectorAll(".hero-slide");
+const slides = document.querySelectorAll(".hero-slide");
 
-let currentSlide = 0;
+if (slides.length > 0) {
 
-setInterval(() => {
+    let currentSlide = 0;
 
-  slides[currentSlide]
-    .classList.remove("active");
+    setInterval(() => {
 
-  currentSlide =
-    (currentSlide + 1) % slides.length;
+        slides[currentSlide]
+            .classList.remove("active");
 
-  slides[currentSlide]
-    .classList.add("active");
+        currentSlide =
+            (currentSlide + 1) % slides.length;
 
-}, 8000);
+        slides[currentSlide]
+            .classList.add("active");
+
+    }, 8000);
+
+}

@@ -38,3 +38,24 @@
       if (!name) { alert('Please enter your name.'); return; }
       alert('Thank you — your inquiry has been sent. I\'ll be in touch shortly.');
     }
+
+const slides = document.querySelectorAll(".hero-slide");
+
+if (slides.length > 0) {
+
+    let currentSlide = 0;
+
+    setInterval(() => {
+
+        slides[currentSlide]
+            .classList.remove("active");
+
+        currentSlide =
+            (currentSlide + 1) % slides.length;
+
+        slides[currentSlide]
+            .classList.add("active");
+
+    }, 8000);
+
+}

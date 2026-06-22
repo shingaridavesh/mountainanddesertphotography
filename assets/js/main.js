@@ -62,6 +62,6 @@ if (slides.length > 0) {
                 .classList.remove("active");
         }, 2500);
 
-    }, 8000);
+    }, 5000);
 
 }

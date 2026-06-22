@@ -128,28 +128,23 @@
       object-fit: cover;
 
       opacity: 0;
-
       transform: scale(1);
 
-      transition:
-          opacity 2.5s ease-in-out;
-
-      animation:
-          heroZoom 10s linear infinite;
+      transition: opacity 2.5s ease-in-out;
     }
 
     .hero-slide.active {
-        opacity: 1;
+      opacity: 1;
+      animation: heroZoom 10s ease-out forwards;
     }
 
     @keyframes heroZoom {
-        from {
-            transform: scale(1);
-        }
-
-        to {
-            transform: scale(1.12);
-        }
+      from {
+          transform: scale(1);
+      }
+      to {
+          transform: scale(1.08);
+      }
     }
 
     .hero-bg::after {

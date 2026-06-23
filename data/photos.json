@@ -125,12 +125,12 @@
     "alt": "Storm Brewing Over Grand Canyon in Grand Canyon National Park, Arizona"
   },
   {
-    "id": "grand-canyon-moran-point",
+    "id": "grand-canyon-moran-point-moody",
     "title": "BEAUTIFUL SUNRISE AT MORAN POINT",
     "gallery": "national-parks",
     "park": "grand-canyon",
     "location": "GRAND CANYON NATIONAL PARK",
-    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-moran-point.jpg",
+    "image": "../assets/images/national-parks/grand-canyon/grand-canyon-moran-point-moody.jpg",
     "state": "Arizona",
     "tags": [
       "desert",
@@ -617,7 +617,7 @@
     "tags": [
       "mountains"
     ],
-    "featured": true,
+    "featured": false,
     "alt": "Bird eye view of Yosemite Valley"
   },
   {
